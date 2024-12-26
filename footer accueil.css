@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+footer{
+    position: relative;
+    bottom: 0;
+    background-color:rgb(63, 15, 15);
+    width:100%;
+    height:auto;
+}
+.D{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 15px ;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px ;
+}
+.p1{
+    display: flex;
+    justify-content: center;
+    color:burlywood;
+    font-size:25px;
+}
+.links p{
+    color:bisque;
+    position:relative;
+    left: 50px;
+    right:50px;
+    font-size: 17px;
+}
+.L{
+    list-style: none;
+}
+.links{
+    border-right: 1px solid white;
+    padding:0 50px 0 0;
+    width: 300px;
+}
+.links ul{
+    margin: 0;
+    padding: 0;
+    
+}
+.links ul a{
+    position:relative;
+    left: 50px;
+    right:50px;
+    padding: 0;
+    line-height: 20px;
+}
+.L a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.6s ;
+}
+.L a:hover{
+    color: chocolate;
+    border-bottom:1px solid chocolate;
+    font-size:15px;
+}
+.Nous{
+    border-right: 1px solid white;
+    padding: 0 100px 0 60px;
+    width: 400px;
+}
+.p2{
+    color:bisque;
+    text-align:left;
+    font-size: 17px;
+}
+.Nous li{
+    list-style: none;
+}
+.L2 a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.6s ;
+    
+}
+.L2 a:hover{
+    color: chocolate;
+    border-bottom:1px solid chocolate;
+    font-size:15px;
+}
+.Nous ul{
+    margin: 0 30px 0 0;
+    padding: 0;
+    width: 400px;
+}
+.Nous ul a{
+    position:relative;
+    left: 0px;
+    right:50px;
+    padding: 0 100px 0 0;
+    width:auto;
+    line-height: 20px;
+}
+.Num{
+    border-right: 1px solid white;
+    padding: 0 100px 0 60px;
+    width: 400px;
+}
+.Num .p3{
+    color:bisque;  
+    text-align: left;
+    font-size: 17px;
+}
+.Num li{
+    list-style: none;
+    color:whitesmoke;
+}
+.Num i{
+    position:relative;
+    left: 0px;
+    color: bisque;
+}
+.Num #email{
+    position: relative;
+    left: 30px;
+}
+.Num ul{
+    position:relative;
+    left: 0px;
+    right:30px;
+    padding: 0 100px 0 0;
+    width:400px;
+    line-height: 5px;
+}
+.Num li{
+    line-height:40px;
+    flex-grow: 1;
+    position: relative;
+    left: 0px;
+}
+.Num input{
+    position:relative;
+    left:0px;
+    bottom: 0px;
+    border-radius:50px;
+    border: none;
+    height: 25px;
+    outline:1px solid chocolate;
+    width: 140px;
+}
+.Num .B{
+    word-wrap:break-word;
+}
+.Num input{
+    position: relative;
+    left:30px;
+}
+.Num input:invalid{
+    background-color: rgba(255, 0, 0, 0.185);
+}
+.Num input:valid{
+    background-color: rgba(0, 128, 0, 0.185);
+}
+.Num .n{
+    font-size:small;
+    position: relative;
+    left: 30px;
+}
+.Num .m{
+    position: relative;
+    
+}
+.Num .LI{
+    font-family: serif;
+    font-size:18px;
+}
+.livraison{
+    padding: 0 50px 0 20px;
+    width: 300px;
+}
+.livraison .p4{
+    color: bisque;
+    text-align: left;
+    position: relative;
+    left: 30px;
+    font-size: 17px;
+}
+.livraison li{
+    list-style: none;
+}
+.livraison a{
+    color:whitesmoke;
+    text-decoration:none;
+    font-size: 14px;
+    transition: all 0.6s;
+}
+.livraison a:hover{
+    border-bottom:1px solid chocolate ;
+    color: chocolate;
+    font-size:15px;
+}
+.livraison .IMG1{
+    width:40px;
+    height:35px;
+    border-radius: 3px;
+    position: relative;
+    top: 15px;
+}
+.livraison .flex{
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -30px;
+}
+.livraison .flex li{
+    padding:9px;
+}
+.livraison .IMG2{
+    width:40px;
+    height:35px;
+    border-radius: 3px;
+    position: relative;
+    top:15px;
+}
+.visa{
+    position: relative;
+    left:5px;
+    bottom:2,5px
+}
+.p5{
+    text-align: center;
+    margin: 0 auto;
+    padding: 20px;
+    color: bisque;
+}
+.ICONES i{
+    position: relative;
+    left:695px;
+    font-size: 20px;
+    padding:0 5px;
+    transition:0,6 ease ;
+}
+.ICONES{
+    padding: 20px 0;
+}
+.ICONES .bi:hover{
+    font-size: 25px;
+}
+@media screen and (max-width: 600px){
+    .D{
+        margin-top: 30px;
+    }
+    .links{
+        border-right: none;
+        position: relative;
+        left: -40px;
+        padding-bottom: 20px;
+    }
+    .Nous{
+        border-right: none;
+        padding-bottom: 20px;
+    }
+    .Num{
+        border-right: none;
+        padding-bottom: 20px;
+    }
+    .livraison{
+        position: relative;
+        left: -48px;
+        padding-bottom: 20px;
+    }
+    .ICONES i{
+        position: relative;
+        left: 220px;
+    }
+}

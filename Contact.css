@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: auto;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 1055px;
+}
+.contact{
+    margin: 40px;
+}
+.contact h1{
+    text-align: center;
+    font-size: 34px;
+    color: #471010;
+}
+header{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.contactez-nous{
+    top: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+}
+.contactInfo{
+    background-color: #faebd7;
+    width: 400px;
+    height: 270px;
+    position: relative;
+    left: -50px;
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid #a94803;
+}
+.contactInfo h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.info i{
+    position: relative;
+    left: 0;
+}
+.adresse, .telephone, .Email{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+}
+.icones .bi{
+    font-size: 22px;
+    position: relative;
+    left: 32%;
+    padding:0 5px;
+    top: 5px;
+}
+.icones .bi-facebook:hover{
+    color: #1877F2;
+}
+.icones .bi-instagram:hover{
+    color: #E1306C;
+}
+.icones .bi-linkedin:hover{
+    color: #0077B5;
+}
+.icones .bi-twitter:hover{
+    color: #1DA1F2;
+}
+.contactForm{
+    background-color: #faebd7;
+    padding: 40px;
+    border-radius: 5px;
+    border: 1px solid #a94803;
+}
+.contactForm h2{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.contactForm label{
+    font-size: 16px;
+    font-weight: 500;
+    margin: 10px;
+}
+input[type="text"] {
+    width: 350px; 
+    left: -15px;
+    position: relative;
+    padding:10px 35px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="text"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="text"]::placeholder {
+    color: #aaa; 
+}
+input[type="email"] {
+    width: 350px; 
+    left: -15px;
+    position: relative;
+    padding:10px 35px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="email"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="email"]::placeholder {
+    color: #aaa; 
+}
+input[type="tel"] {
+    width: 350px; 
+    padding:10px 35px;
+    left: -15px;
+    position: relative;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="tel"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="tel"]::placeholder {
+    color: #aaa; 
+}
+textarea {
+    width: 350px; 
+    padding: 10px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+textarea:focus {
+    border-color: #860101;
+    outline: none; 
+}
+textarea::placeholder {
+    color: #aaa; 
+}
+input[type="submit"] {
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    left: 2px;
+    top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+input[type="submit"]:hover {
+    background-color: rgb(216, 52, 52); 
+}
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+input[type="submit"]:focus {
+    outline: none; 
+}
+.contactForm .bi{
+    position: relative;
+    left: 15px;
+    z-index: 1;
+    color: #aaa;
+}
+@media screen and (max-width: 600px){
+    .contactez-nous{
+        display: block;
+    }
+    .contactInfo{
+        left: 0;
+        width: 450px;
+        margin-bottom: 20px;
+    }
+    .wrapper{
+        height: 1400px;
+    }
+}

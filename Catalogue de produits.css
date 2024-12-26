@@ -1,0 +1,475 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: auto;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.wrapper{
+    height: 8250px;
+}
+.catalogue{
+    position: fixed;
+    top: 155px;
+    left: 0;
+}
+.categories{
+    margin: 10px 50px;
+    background-color: #faebd7;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #a94803;
+    border-radius: 5px;
+}
+.categories p {
+    font-size: large;
+    font-weight: 500;
+    text-align: center;
+}
+input[type="submit"] {
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    margin: 15px 0 0 0;
+    left: 25%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+input[type="submit"]:hover {
+    background-color: rgb(216, 52, 52); 
+}
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+input[type="submit"]:focus {
+    outline: none; 
+}
+.fourchette{
+    margin: 0 50px 10px 50px;
+    background-color: #faebd7;
+    padding: 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #a94803;
+    border-radius: 5px;
+}
+.price-content{
+    display: flex;
+    justify-content: space-between;
+}
+.fourchette p{
+    font-size: large;
+    font-weight: 500;
+    text-align: center;
+}
+.fourchette label{
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+#min-value, #max-value{
+    position: relative;
+    top: 10px;
+    font-size: 15px;
+    font-weight: 500;
+}
+input[type="range"] {
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    appearance: none;          
+    width: 250px;               
+    height: 10px;              
+    background: #ddd;   
+    border-color: 1px solid gray;      
+    border-radius: 5px;      
+    outline: none;            
+    cursor: pointer;          
+}
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #f79404;
+    border-radius: 30%;
+    border: none;
+    transition: background 0.3s ease;
+}
+input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: #f79404;
+    border-radius: 30%;
+    border: none;
+    transition: background 0.3s ease;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 15px;              
+    height: 15px;            
+    background: #f79404;      
+    border-radius: 30%;       
+    border: none; 
+    transition: background 0.3s ease;
+}
+input[type="range"]::-moz-range-track {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+input[type="range"]::-ms-track {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    border-color: 1px solid gray;
+    border-width: 6px 0;
+}
+.search{
+    margin: 0 50px;
+    background-color: #faebd7;
+    padding:15px 20px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #a94803;
+    border-radius: 5px;
+}
+.search label {
+    font-size: large;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 8px;
+}
+#a-search{
+    width: 250px; 
+    padding: 10px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+    margin-bottom: -5px;
+}
+#a-search:focus{
+    border-color: #860101;
+    outline: none; 
+}
+input[type="search"]::placeholder {
+    color: #aaa; 
+}
+option{
+    padding-left:40px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #9a8a8a; 
+}
+#select{
+    width: 250px; 
+    padding: 10px 20px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+#select:focus{
+    border-color: #860101;
+    outline: none; 
+}
+.trier{
+    position: relative;
+    left: 700px;
+}
+.produits{
+    position: relative;
+    top: 20px;
+    left: 200px;
+}
+.cover-tapis{
+    background: url(photos\ catalogue/Tapis\ cover.jpg);
+    background-position: center;
+    width: 900px;
+    margin: 30px;
+    height: 290px;
+    border: 3px solid white;
+}
+.cover-tapis p{
+    color: white;
+    position: relative;
+    text-align: center;
+    width: 896px;
+    height: 286px;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+.Tapies{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    position: relative;
+    left: 14px;
+}
+.produit{
+    margin:20px 15px;
+    width: 280px;
+    background-color: rgb(250, 242, 226);
+    border-radius: 5px;
+    padding-bottom: 20px;
+    transition: all 0.9s ease;
+    cursor: pointer;
+    height: 380px;
+}
+.produit:hover{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.06);
+}
+.photo{
+    width: 270px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.produit p{
+    margin: 10px;
+}
+.produit button{
+    position: relative;
+    left: 20%;
+    background-color: #471010;
+    border: none;
+    outline: none;
+    
+    padding: 10px;
+    border-radius: 10px;
+}
+.produit button:hover{
+    background: rgb(59, 1, 1);
+}
+.produit button:active{
+    transform: scale(0.98);
+}
+.produit button i{
+    position: relative;
+    left: 0;
+    color: white;
+}
+.produit button a{
+    color: white;
+    text-decoration: none;
+}
+.produit .nom{
+    font-size: 23px;
+    font-weight: 600;
+    text-align: center;
+}
+.produit .prix{
+    margin: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #860101;
+}
+.cover-coussin{
+    background: url(photos\ catalogue/coussin\ cover.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin: 30px;
+    height: 290px;
+    border: 3px solid white;
+    position: relative;
+    left: -200px;
+}
+.cover-coussin p{
+    color: white;
+    position: relative;
+    text-align: center;
+    width: 896px;
+    height: 286px;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+.Coussins{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    position: relative;
+    left: -185px;
+}
+.cover-poterie{
+    background: url(photos\ catalogue/poterie\ cover.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin: 30px;
+    height: 290px;
+    border: 3px solid white;
+    position: relative;
+    left: -200px;
+}
+.cover-poterie p{
+    color: white;
+    position: relative;
+    text-align: center;
+    width: 896px;
+    height: 286px;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+.Poterie{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    position: relative;
+    left: -185px;
+}
+.cover-beaute{
+    background: url(photos\ catalogue/beaute\ cover.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin: 30px;
+    height: 290px;
+    border: 3px solid white;
+    position: relative;
+    left: -200px;
+}
+.cover-beaute p{
+    color: white;
+    position: relative;
+    text-align: center;
+    width: 896px;
+    height: 286px;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+.Beauté{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    position: relative;
+    left: -185px;
+}
+.cover-accessoire{
+    background: url(photos\ catalogue/accessoire\ cover.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 900px;
+    margin: 30px;
+    height: 290px;
+    border: 3px solid white;
+    position: relative;
+    left: -200px;
+}
+.cover-accessoire p{
+    color: white;
+    position: relative;
+    text-align: center;
+    width: 896px;
+    height: 286px;
+    align-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 35px;
+    font-weight: 500;
+    text-transform: uppercase;
+    border: 3px solid white;
+}
+.Accessoire{
+    display: flex;
+    flex-wrap: wrap;
+    width: 930px;
+    position: relative;
+    left: -185px;
+}
+@media screen and (max-width: 600px){
+    .catalogue{
+        display: none;
+    }
+    .cover-tapis{
+        width: 550px;
+        position: relative;
+        left: -40px;
+    }
+    .cover-tapis p, .cover-accessoire p, .cover-beaute p, .cover-poterie p, .cover-coussin p{
+        width: 545px;
+    }
+    .cover-accessoire, .cover-beaute, .cover-poterie, .cover-coussin{
+        width: 550px;
+        position: relative;
+        left: -240px;
+    }
+    .trier{
+        left: 280px;
+    }
+    .Tapies{
+        position: relative;
+        left: -25px;
+        flex-wrap: nowrap;
+        display: block;
+    }
+    #tapie7, #tapie8, #tapie9{
+        display: none;
+    }
+    .pro1, .pro2, .pro3{
+        display: flex;
+    }
+    .produit{
+        width: 260px;
+    }
+    .photo{
+        width: 250px;
+    }
+    .Coussins{
+        position: relative;
+        left: -225px;
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .Poterie{
+        position: relative;
+        left: -225px;
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .Beauté{
+        position: relative;
+        left: -225px;
+        flex-wrap: nowrap;
+        display: block;
+    }
+    .Accessoire{
+        position: relative;
+        left: -225px;
+        flex-wrap: nowrap;
+        display: block;
+    }
+}

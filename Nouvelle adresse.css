@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.NOUVELLE h1{
+    text-align: center;
+    margin:50px;
+    font-size: 30px;
+    color:#7c3737;
+    font-weight: 500;
+}
+.nouvelle{
+    border: 1px solid #a94803;
+    border-radius: 10px;
+    width:500px;
+    margin-top:20px;
+    background-color: rgb(250, 235, 215);
+    padding:40px;
+    margin-bottom: 50px;
+}
+.nouvelle label{
+    padding:20px;
+    font-weight: 500;
+}
+input[type="text"] {
+    width: 450px; 
+    left: -15px;
+    position: relative;
+    padding:10px 20px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="text"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="text"]::placeholder {
+    color: #aaa; 
+}
+input[type="tel"] {
+    width: 450px; 
+    left: -15px;
+    position: relative;
+    padding:10px 20px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="tel"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="tel"]::placeholder {
+    color: #aaa; 
+}
+.nouvelle option{
+    padding-left:40px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #9a8a8a; 
+}
+.nouvelle select{
+    width: 450px; 
+    left: -15px;
+    position: relative;
+    padding:10px 20px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease;
+}
+.nouvelle select:focus{
+    border-color: #860101;
+    outline: none; 
+}
+.nouvelle select::placeholder {
+    color: #aaa; 
+} 
+.nouvelle .Enregitrer{
+    width: 100px;
+    padding:0px;
+    color:white;
+    height: 50px;
+    background-color: rgb(219, 70, 70);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    left: 260px;
+    margin-top: 20px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+.nouvelle .Enregitrer:hover{
+    background-color: rgb(216, 52, 52);  
+}
+.nouvelle .Enregitrer:active{
+    transform: scale(0.98);
+}
+.nouvelle a{
+    color:rgb(71, 16, 16);
+    text-decoration: none;
+    font-size: 20;
+}
+.nouvelle a:hover{
+    color:rgb(71, 16, 16);
+}
+.nouvelle #I1{
+    position:relative;
+    top:35px;
+    left: 5px;
+    color: rgb(71, 16, 16);
+    font-size: 18px;
+}
+.nouvelle .retour{
+    position:relative;
+    top: 35px;
+    left:10px;
+}

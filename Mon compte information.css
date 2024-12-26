@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+#Information{
+    text-align: center;
+    margin-top: 50px;
+    color:#7c3737;
+    font-weight: 500;
+    font-size: 30px;
+}
+.Information{
+    border: 1px solid #a94803;
+    border-radius: 10px;
+    width:500px;
+    padding: 30px;
+    margin: 30px;
+    margin-bottom: 50px;
+    background-color: rgb(250, 235, 215);
+    padding: 40px 40px 40px 40px;
+}
+.Information label{
+    font-weight: 500;
+    position: relative;
+    top: 13px;
+}
+form .sexes{
+    margin: 10px 0;
+    left: -10px;
+    top: 5px;
+    position: relative;
+}
+form .sexe{
+    font-weight: 500;
+    position: relative;
+    top: 0;
+}
+input[type="text"] {
+    width: 450px; 
+    left: -15px;
+    position: relative;
+    padding:10px 35px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    margin: 10px 0;
+    transition: border-color 0.3s ease; 
+}
+input[type="text"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="text"]::placeholder {
+    color: #aaa; 
+}
+input[type="email"] {
+    width: 450px; 
+    left: -15px;
+    margin: 10px 0;
+    position: relative;
+    padding:10px 35px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="email"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="email"]::placeholder {
+    color: #aaa; 
+}
+input[type="password"] {
+    width: 450px; 
+    left: -15px;
+    position: relative;
+    padding:10px 35px;
+    font-size: 16px; 
+    margin: 10px 0;
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="password"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="password"]::placeholder {
+    color: #aaa; 
+}
+.Information i{
+    position: relative;
+    left: 0;
+    top: 47px;
+    z-index: 1;
+    color:#aaa;
+    font-size:20px;
+}
+button {
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    left: 2px;
+    top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+button:hover {
+    background-color: rgb(216, 52, 52); 
+}
+button:active {
+    transform: scale(0.98);
+}
+button:focus {
+    outline: none; 
+}
+button a{
+    color:white;
+    text-decoration: none;
+}
+button a:hover{
+    color:white;
+}
+button:active{
+        transform: scale(0.98);
+}
+button:hover{
+    background-color: rgb(216, 52, 52)
+}
+form .retour , .suivant{
+    color:rgb(71, 16, 16);
+    text-decoration: none;
+}
+#I1{
+   position: relative;
+   top:27px;
+   left: -18px;
+   color:rgb(71, 16, 16);
+   font-size:18px ;
+}
+.retour{
+    position:relative;
+    top:25px;
+    left: -15px;  
+    font-size: 15px;
+}
+.retour:hover{
+    color:rgb(71, 16, 16);
+}
+
+@media screen and (max-width: 600px){
+    .Information{
+        margin-left:20px;
+        
+    }
+    .Information .input{
+        width:350px;
+        margin-bottom:20px;
+    }
+    .Information .radio{
+        margin-bottom:20px;
+        margin-left:25px
+    }
+    .Information label{
+        position: relative;
+        top:0px;
+        left:25px
+    }
+    .Information i{
+        position: relative;
+        top:1px;
+        left:15px
+    }
+    .Information button{
+        margin-left:20px
+    }
+    .suivant{
+        position:relative;
+        left:220px
+    }
+}

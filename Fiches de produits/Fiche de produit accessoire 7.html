@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fiche de produit</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="Fiche de produit.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="footer accueil.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upperheader"> 
+            <div class="container">
+                <div class="nav-logo">
+                    <img src="photos footer and header/logo.jpeg" class="image">
+                </div> 
+                <div class="nav-menu dropdown">
+                    <ul class="menu">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-list"></i></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="../Accueil.html">Accueil</a></li>
+                            <li><a class="dropdown-item" href="../Catalogue de produits.html">Catalogue de produit</a></li>
+                            <li><a class="dropdown-item" href="../Commande et Paiement.html">Commande et paiement</a></li>
+                            <li><a class="dropdown-item" href="../blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="../Contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <input type="search" id="search" placeholder="Rechercher dans notre produits">
+                    <i class='bi bi-search'></i>
+                </div>
+                <div class="nav-button">
+                    <a href="../se connecter.html"><i class='bi bi-person'></i></a>
+                    <span class="iconuser"><a href="../se connecter.html#se connecter"  id="loginbtn">Se connecter&nbsp;  /</a>
+                    <a href="../S'inscrire.html"  id="registerbtn">&nbsp;s'inscrire</a></span>
+                </div>
+                <div class="icon-panier dropdown">
+                    <ul class="Panier">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-cart"></i>0</a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="../Panier d'achat.html">Voir le panier</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icon-laguage dropdown">
+                    <ul class="langue">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-globe"></i>&nbsp;<span>Langue</span></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Arabe</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container2">
+                <ul>
+                    <li><a href="../Accueil.html">Accueil</a></li>
+                    <li><a href="../Catalogue de produits.html">Catalogue de produits</a></li>
+                    <li><a href="../Commande et Paiement.html">Commande et paiement</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                    <li><a href="../Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="fiche">
+            <div class="container my-5 d-block">
+                <div class="row d-flex">
+                    <div class="col-md-6" id="produit1">
+                        <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="photos fiche de produit/accessoire7.jpg" class="d-block w-100 h-100 my-2" alt="Pack des accessoires traditionnelle" id="produit">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Précédent</span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Suivant</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="col-md-6" id="info1">
+                        <p class="titre-produit">Collier Mala en Agate Marocaine</p>
+                        <p class="discription-produit">Ce collier mala est composé 
+                            de perles d'agate noire, une pierre réputée pour ses 
+                            vertus protectrices et énergisantes. Il est entièrement 
+                            fabriqué à la main, offrant ainsi une pièce unique. 
+                            Disponible en plusieurs tailles, il est proposé.</p>
+
+                        <h3 class="prix-produit">
+                            <span class="text-muted text-decoration-line-through">3000,99 DH</span>
+                            <span>2500,99 DH</span>
+                        </h3>
+                        <div class="d-flex align-items-center quantitee">
+                            <label for="quantity" class="me-3">Quantité</label>
+                            <input type="number" id="quantity" class="w-30" value="1" min="1" max="100">
+                        </div>
+
+                        <div class="mt-4">
+                            <button class="au-panier"><a href="../Panier d'achat.html">Ajouter au panier</a></button>
+                            <button class="au_wishlist"><a href="#">Ajouter à la wishlist</a></button>
+                        </div>
+
+                        <div class="mt-5 avis">
+                            <h4>Avis Clients</h4>
+                            <div class="reaction">
+                            <i class='bx bxs-star' style='color:#f79404'></i>
+                            <i class='bx bxs-star' style='color:#f79404'></i>
+                            <i class='bx bxs-star' style='color:#f79404'></i>
+                            <i class='bx bxs-star' style='color:#f79404'></i>
+                            <i class='bx bx-star' style='color:#f79404' ></i>
+                            <span>(4,7/5) - 85 avis</span>
+                        </div>
+                            <button class="btn btn-link">Écrire un avis</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row" id="S">
+                    <h2>Produits similaires</h2>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="photos fiche de produit/accessoire1.jpg" class="card-img-top" alt="Huile de jojoba" id="photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Pack des accessoires</h5>
+                                <p class="card-prix">900,99 DH</p>
+                                <button><a href="FIche de produit accessoire 1.html">Voir le produit</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="photos fiche de produit/accessoire 3.jpg" class="card-img-top" alt="Huile de rose musquée" id="photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Collier en or</h5>
+                                <p class="card-prix">1240,99 DH</p>
+                                <button><a href="Fiche de produit accessoire 3.html">Voir le produit</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="photos fiche de produit/accessoire4.jpg" class="card-img-top" alt="Huile essentielle de lavande" id="photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Sac Marocaine</h5>
+                                <p class="card-prix">1500,99 DH</p>
+                                <button><a href="Fiche de produit accessoire 4.html">Voir le produit</a></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="card">
+                            <img src="photos fiche de produit/accessoire 2.jpg" class="card-img-top" alt="Huile de coco" id="photo">
+                            <div class="card-body">
+                                <h5 class="card-title">Cherbil Marocaine</h5>
+                                <p class="card-prix">1500,99 DH</p>
+                                <button><a href="Fiche de produit accessoire 2.html">Voir le produit</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="logo">
+            <img src="photos footer and header/logo.jpeg" class="image">
+        </div>
+        <p class="p1">L'Artisanat du maroc</p>
+        <div class="all">
+            <div class="D">
+                <div class="links">
+                    <p>Plan de site</p>
+                    <ul class="L">
+                        <li><a href="../Accueil.html">Accueil</a></li>
+                        <li><a href="../Catalogue de produits.html">Catalogue de produits</a></li>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../se connecter.html">Mon compte</a></li>
+                        <li><a href="../Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="Nous">
+                    <p class="p2">Ce qui concerne notre plateforme</p>
+                    <ul class="L2">
+                        <li><a href="../Qui somme nous.html">Qui sommes nous?</a></li>
+                        <li><a href="../Accueil.html#categories">Catégorie</a></li>
+                        <li><a href="#">Politique de protection des donnees personnelles </a></li>
+                        <li><a href="../Contact.html">Contactez nous</a></li>
+                    </ul>
+                </div>
+                <div class="Num">
+                    <p class="p3">Contact</p>
+                    <ul>
+                        <li class="LI">Av chahid hassan ben ahmed toto <span class="B"> qu ZAOUIA SAFI-MAROC</span></li>
+                        <li class="n"><i class='bx bxs-phone'>:</i>&nbsp;&nbsp;+212 (0) 501 023 231</li>
+                        <li class="n"><i class='bx bxs-mobile-vibration'>:</i>&nbsp; +212 (0) 604 458 198 </li>
+                        <li><i class='bx bxl-gmail' id="email">:</i>&nbsp;&nbsp;<input type="email" placeholder="Entrez votre G-mail"> </li>
+                    </ul>
+                </div>
+                    <div class="livraison">
+                        <p class="p4">Livraison et payement</p>
+                        <ul>
+                            <li><a href="../Commande et Paiement.html#Livraison">Livraison</a></li>
+                            <li><a href="../Commande et Paiement.html#Paiement">Payement</a></li>
+                            <li>
+                                <ul class="flex">
+                                    <li class="visa"><a href="../Commande et Paiement.html#Paiement"><img src="photos footer and header/Visa-e-Mastercard.jpg"class="IMG1"></a></li>
+                                    <li><a href="../Commande et Paiement.html#Paiement"><img src="photos footer and header/av2rv3z2f.jpg" class="IMG2"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ICONES">
+                <p class="p5">Vous pouvez visiter nos comptes sur ces réseaux sociaux</p>
+                <a href="#"><i class="bi bi-facebook" style="color: #1877F2;" id="facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram" style="color: #E1306C;" id="instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin" style="color:  #0077B5;" id="linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter" style="color: #1DA1F2;" id="twitter"></i></a>
+                <a href="#"><i class="bi bi-pinterest" style="color: #E60023;" id="pinsterest"></i></a>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

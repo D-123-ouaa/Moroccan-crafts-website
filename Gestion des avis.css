@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.AVIS h1{
+    text-align: center;
+    margin:50px;
+    font-size: 30px;
+    color:#7c3737;
+    font-weight:500;
+}
+.avis{
+    border: 1px solid #a94803;
+    border-radius: 10px;
+    width:500px;
+    margin-top:20px;
+    background-color: rgb(250, 235, 215);
+    padding:40px;
+    margin-bottom: 50px;
+}
+.avis .p1{
+    text-align: center;
+    color: rgb(97, 29, 29);
+    font-weight: 400;
+}
+.avis .retour{
+    position: relative;
+    top:20px;
+    left:-20px;
+}
+.avis #I1{
+    position: relative;
+    top:22px;
+    left:-22px;
+    color: rgb(71, 16, 16);
+    font-size:18px;
+}
+.avis a{
+    color:rgb(71, 16, 16);
+    text-decoration: none;
+    font-size:15px;
+}
+.avis a:hover{
+    color: rgb(71, 16, 16);
+}
+.avis .p2{
+    background-color: rgb(169, 75, 75);
+    color:white;
+    font-size: 17px;
+    padding:3px 10px;
+    border: 2px solid rgb(147, 128, 128);
+    border-radius:5px;
+}
+@media screen and (max-width: 600px) {
+    .avis{
+        margin-left:0px;
+        width:450px;
+    }
+}

@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: url(photos\ cover/PHOTO\ COVER\ 7.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.wrapper{
+    min-height: 700px;
+    background: rgba(39, 39, 39, 0.5);
+}
+.form-box {
+    position: relative;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    width: 480px;
+    height: 450px;
+    overflow: hidden;
+    left: 530px;
+    top: 40px;
+    z-index: 2;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.register-container {
+    width: 480px;
+    display: flex;
+    flex-direction: column;
+    transition: .5s ease-in-out;
+    position: relative;
+    top: 20px;
+}
+.input-box i {
+    position: relative;
+    left: 30px;
+    top: -45px;
+}
+.top span {
+    color: white;
+    font-size: small;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+.top span a {
+    font-weight: 500;
+    color: white;
+    margin-left: 5px;
+}
+header {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+.input-field {
+    font-size: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    height: 50px;
+    width: 450px;
+    padding: 0 10px 0 45px;
+    outline: none;
+    position: relative;
+    transition: .2s ease;
+    margin: 8px 15px;
+    border-bottom: 2px solid white;
+}
+.input-field:hover , .input-field:focus {
+    background: rgba(255, 255, 255, 0.3);
+}
+::-webkit-input-placeholder {
+    color: white;
+}
+.submit {
+    font-size: 15px;
+    font-weight: 500;
+    color: black;
+    height: 45px;
+    width: 430px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    margin: 5px 25px;
+    transition: .3s ease-in-out;
+}
+.two-col{
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: small;
+    gap: 20px;
+    position: relative;
+    top: -20px;
+}
+.two-col .one{
+    display: flex;
+    gap: 5px;
+    position: relative;
+    left: -15px;
+}
+.two label a{
+    text-decoration: none;
+    color: white;
+    position: relative;
+    left: 100px;
+}
+.two label a:hover {
+    text-decoration: underline;
+}
+.submit:hover {
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.2);
+}
+@media screen and (max-width: 600px) {
+    .form-box {
+        width: 80%;
+        height: 500px;
+        left: 60px;
+        top: 60px;
+    }
+}
+    
