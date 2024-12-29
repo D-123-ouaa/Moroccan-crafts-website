@@ -106,8 +106,7 @@ body{
 .form td i{
     color:#aaa;
     position: relative;
-    top:50px;
-    left: -10px;
+    top:48px;
     font-size:20px;
 }
 #table1{
@@ -115,31 +114,31 @@ body{
 }
 #table1 #i1{
     position: relative;
-    left: -170px;
+    left: -185px;
 }
 #table1 #i2{
     position: relative;
-    left: -45px;
+    left: -60px;
 }
 #table1 #i3{
     position:relative;
-    left:-80px;
+    left: -95px;
 }
 #table1 #i4{
     position:relative;
-    left:-60px
+    left:-75px;
 }
 #table1 #i5{
     position: relative;
-    left:-125px
+    left:-140px;
 }
 #table1 #i6{
     position: relative;
-    left:-65px;
+    left:-80px;
 }
 #table1 #i7{
     position: relative;
-    left:-215px
+    left:-230px
 }
 input::placeholder {
     color: #aaa; 
@@ -281,7 +280,7 @@ input::placeholder {
 }
 .B label{
     margin-left:25px ;
-    margin-top:30px;
+    margin-top:5px;
     margin-bottom:5px;
     font-size: large;
     font-weight: 500;
@@ -322,12 +321,11 @@ option:hover{
 }
 #table3{
     position: relative;
-    left: -43px;
-    top: 70px;
+    left: -25px;
+    top: 113px;
     border-collapse: collapse;
     background-color: #faebd7;
 }
-
 #table3 td button{
     width: 300px;
     height: 50px;

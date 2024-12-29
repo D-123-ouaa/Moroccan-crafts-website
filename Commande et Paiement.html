@@ -83,13 +83,13 @@
                         <tr class="information"><td class="c">Informations de Livraison</td></tr>
                         <tr class="form">
                             <td>
-                                <label>Nom de de compte:</label><i class='bx bx-user' id="i1"></i><input type="text" placeholder="Votre compte" required><br>
-                                <label>Email:</label><i class='bx bxl-gmail' id="i2"></i> <input type="email" placeholder="Votre email" required><br>
-                                <label>L'adresse:</label><i class='bx bx-map'id="i3"></i> <input type="text" placeholder="Votre adresse" required><br>
-                                <label>La ville:</label><i class='bx bxs-city'id="i4"></i><input type="text" placeholder="Votre ville" required><br>
-                                <label>Le code postal:</label><i class='bx bx-envelope' id="i5"></i><input type="text" placeholder="Le code postal" required><br>
-                                <label>La pays</label>:<i class='bx bx-world'id="i6"></i><input type="text" placeholder="Votre pays" required><br>  
-                                <label>Le numéro de télephone:</label><i class='bx bx-phone'id="i7"></i><input type="tel" placeholder="Votre numéro de téléphone" required>                  
+                                <label>Nom de de compte:</label><i class='bi bi-person-fill' id="i1"></i><input type="text" placeholder="Votre compte" required><br>
+                                <label>Email:</label><i class='bi bi-envelope-fill' id="i2"></i> <input type="email" placeholder="Votre email" required><br>
+                                <label>L'adresse:</label><i class='bi bi-geo-alt-fill'id="i3"></i> <input type="text" placeholder="Votre adresse" required><br>
+                                <label>La ville:</label><i class='bi bi-buildings-fill'id="i4"></i><input type="text" placeholder="Votre ville" required><br>
+                                <label>Le code postal:</label><i class='bi bi-pin-map-fill' id="i5"></i><input type="text" placeholder="Le code postal" required><br>
+                                <label>La pays:</label><i class='bi bi-flag-fill' id="i6"></i><input type="text" placeholder="Votre pays" required><br>  
+                                <label>Le numéro de télephone:</label><i class='bi bi-phone-fill'id="i7"></i><input type="tel" placeholder="Votre numéro de téléphone" required>                  
                             </td>
                         </tr>
                         <tr>
@@ -106,31 +106,31 @@
                             <td class="td">image</td><td class="td" width="200px"> nom</td><td class="td">Quantité</td> <td class="td">prix</td>
                         </tr>
                         <tr class="title2">
-                            <td class="produit" ><img src="Photos/accessoire7.jpg" alt="accessoire7" class="photo"></td>
+                            <td class="produit" ><img src="Fiches de produits/photos fiche de produit/accessoire7.jpg" alt="accessoire7" class="photo"></td>
                             <td class="produit"> collier et bagues en or</td>
                             <td class="produit"><span>1</span></td>
                             <td class="produit" id="prix">65000 Dhs</td>
                         </tr>
                         <tr class="title2">
-                            <td class="produit"><img src="Photos/beauté6.jpg" alt="beauté6" class="photo"></td>
+                            <td class="produit"><img src="Fiches de produits/photos fiche de produit/beauté6.jpg" alt="beauté6" class="photo"></td>
                             <td class="produit">Le Kohle de désert</td>
                             <td class="produit"><span>1</span></td>
                             <td class="produit" id="prix">350 Dhs</td>
                         </tr>
                         <tr class="title2">
-                            <td class="produit"><img src="Photos/coussin7.jpg" alt="coussin7" class="photo"></td>
+                            <td class="produit"><img src="Fiches de produits/photos fiche de produit/coussin7.jpg" alt="coussin7" class="photo"></td>
                             <td class="produit">Coussins marocain modèrne </td>
                             <td class="produit"><span>1</span></td>
                             <td class="produit" id="prix">5999 Dhs</td>
                         </tr>
                         <tr class="title2">
-                            <td class="produit"><img src="Photos/coussin1.jpg" alt="coussin1" class="photo"></td>
+                            <td class="produit"><img src="Fiches de produits/photos fiche de produit/coussin1.jpg" alt="coussin1" class="photo"></td>
                             <td class="produit">Coussins marocain traditionnels </td>
                             <td class="produit"><span>4</span></td>
                             <td class="produit" id="prix">2999 Dhs</td>
                         </tr>
                         <tr class="title2">
-                            <td class="produit"><img src="Photos/poterie5.jpg" alt="poterie5" class="photo"></td>
+                            <td class="produit"><img src="Fiches de produits/photos fiche de produit/poterie5.jpg" alt="poterie5" class="photo"></td>
                             <td class="produit">Vase en poterie</td>
                             <td class="produit"><span> 2 </span></td>
                             <td class="produit" id="prix">3599 Dhs</td>
@@ -146,28 +146,27 @@
             
                 <div class="B" id="Paiement">
                     <div class="C" >
-                        <table id="table3" width="150%">
+                        <table id="table3" width="142%">
                             <tr class="title3">
                                 <td class="b">Paiement</td>
                             </tr>
-                        <tr>
-                            <td><div class="methode">Méthode de paiemenet</div></td></tr>
-                                <tr>
-                                    <td><label>Choisir un mode de paiement :</label><br>
+                            <tr>
+                                <td><div class="methode">Méthode de paiemenet</div></td></tr>
+                            <tr>
+                                <td><label>Choisir un mode de paiement :</label><br>
                                     <select id="payment-method" name="payment-method" required width="300px">
-                                    <i class='bx bx-credit-card-alt'></i><option value="credit-card" class="cart">Carte de Crédit</option>
-                                    <i class='bx bxl-paypal' ></i><option value="paypal">PayPal</option>
-                                    <i class="bi bi-cash-coin"></i><option value="bank-transfer">Virement Bancaire</option>
-                                    <i class='bx bxl-mastercard' ></i><option value="master-cart">Master-card</option>
-                                    <i class='bx bxl-visa'></i><option value="visa">Visa</option>
-                                    <option value="master-cart">cash +</option>
+                                        <i class='bx bx-credit-card-alt'></i><option value="credit-card" class="cart">Carte de Crédit</option>
+                                        <i class='bx bxl-paypal' ></i><option value="paypal">PayPal</option>
+                                        <i class="bi bi-cash-coin"></i><option value="bank-transfer">Virement Bancaire</option>
+                                        <i class='bx bxl-mastercard' ></i><option value="master-cart">Master-card</option>
+                                        <i class='bx bxl-visa'></i><option value="visa">Visa</option>
+                                        <option value="master-cart">cash +</option>
                                     </select></td>
-                                </tr>   
-                                <tr>
-                                    <td><button><a href="#">Confirmer ma commande</a></button></td>
-                                </tr>
-                            </table>                    
-                        </div>
+                            </tr>   
+                            <tr>
+                                <td><button><a href="#">Confirmer ma commande</a></button></td>
+                            </tr>
+                        </table>                    
                     </div>
                 </div>    
             </div>

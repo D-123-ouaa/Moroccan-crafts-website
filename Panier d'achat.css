@@ -135,7 +135,7 @@ table{
     right: 10px;
 }
 #table2 label{
-    padding: 45px;
+    padding: 0px;
     font-size: large;
     font-weight: 500;
 }
@@ -147,7 +147,7 @@ table{
     position: relative;
     top: 0;
     left: 15px;
-    height: 308px;
+    height: 300px;
     border-bottom: 1px solid gray;
 }
 .title6 #number{

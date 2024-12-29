@@ -496,7 +496,7 @@ input[type="range"]::-ms-track {
 }
 .reaction {
     position: relative;
-    left: -150px;
+    left: 0px;
     padding-bottom: 4px;
 }
 .produit{
