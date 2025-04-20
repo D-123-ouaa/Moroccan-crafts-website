@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Commande et Paiement.css">
+    <link rel="stylesheet" href="Header.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="footer accueil.css">
+    <title>Commande et paiement</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="upperheader"> 
+            <div class="container">
+                <div class="nav-logo">
+                    <img src="photos footer and header/logo.jpeg" class="image">
+                </div> 
+                <div class="nav-menu dropdown">
+                    <ul class="menu">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-list"></i></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="Accueil.html">Accueil</a></li>
+                            <li><a class="dropdown-item" href="Catalogue de produits.html">Catalogue de produit</a></li>
+                            <li><a class="dropdown-item" href="Commande et Paiement.html">Commande et paiement</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <input type="search" id="search" placeholder="Rechercher dans notre produits">
+                    <i class='bi bi-search'></i>
+                </div>
+                <div class="nav-button">
+                    <a href="se connecter.html"><i class='bi bi-person'></i></a>
+                    <span class="iconuser"><a href="se connecter.html#se connecter"  id="loginbtn">Se connecter&nbsp;  /</a>
+                    <a href="S'inscrire.html"  id="registerbtn">&nbsp;s'inscrire</a></span>
+                </div>
+                <div class="icon-panier dropdown">
+                    <ul class="Panier">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-cart"></i>0</a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="Panier d'achat.html">Voir le panier</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icon-laguage dropdown">
+                    <ul class="langue">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-globe"></i>&nbsp;<span>Langue</span></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Arabe</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container2">
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Catalogue de produits.html">Catalogue de produits</a></li>
+                    <li><a href="Commande et Paiement.html">Commande et paiement</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <form id="formCommande">
+        <div class="container">
+                <div class="A">
+                   <div class="Livraison" id="Livraison">
+                        <table id="table1" width="100%">
+                                <tr class="title1"><td height="60px" class="d">Commande et paiement</td></tr>
+                                <tr class="information"><td class="c">Informations de Livraison</td></tr>
+                                
+                                <tr class="form">
+                                    <td>                                
+                                        <div id="divNom">    
+                                        <label>Nom de de compte:</label><i class='bi bi-person-fill' id="i1"></i><input type="text" placeholder="Votre compte" id="Nom">
+                                        </div>
+                                        </div>
+                                        <div id="divEmail">
+                                        <label>Email:</label><i class='bi bi-envelope-fill' id="i2"></i> <input type="text" placeholder="Votre email"  id="email">
+                                        </div>
+                                        <div id="divAdresse">
+                                        <label>L'adresse:</label><i class='bi bi-geo-alt-fill'id="i3"></i> <input type="text" placeholder="Votre adresse" id="adresse">
+                                        </div>
+                                        <div id="divVille">
+
+                                        <label>La ville:</label><i class='bi bi-buildings-fill'id="i4"></i><input type="text" placeholder="Votre ville" id="ville"></div>
+                                        <div id="divPostal">
+                                        <label>Le code postal:</label><i class='bi bi-pin-map-fill' id="i5"></i><input type="text" placeholder="Le code postal" id="postal"></div>
+                                        <div id="divPays">
+                                        <label>La pays:</label><i class='bi bi-flag-fill' id="i6"></i><input type="text" placeholder="Votre pays" id="pays">
+                                        </div>
+                                        <div id="divTel">
+                                        <label>Le numéro de télephone:</label><i class='bi bi-phone-fill'id="i7"></i><input type="tel" placeholder="Votre numéro de téléphone" id="tel">        
+                                        </div>       
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="Button">
+                                        <button id="btnVerif">Vérifiée</button>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                    <div class="A2" width="700px">
+                        <table  id="table2" width="210%" height="auto">
+                            <tr class="title1" id="title1"><td colspan="3" height="60" class="d"> Récapitulatif de Commande</td></tr>
+                            <tr class="tr1">
+                                <td class="td">image</td><td class="td" width="200px"> nom</td><td class="td">Quantité</td> <td class="td">prix</td>
+                            </tr>
+                            <tr class="title2">
+                                <td class="produit" ><img src="Fiches de produits/photos fiche de produit/accessoire7.jpg" alt="accessoire7" class="photo"></td>
+                                <td class="produit"> collier et bagues en or</td>
+                                <td class="produit"><span>1</span></td>
+                                <td class="produit" id="prix">65000 Dhs</td>
+                            </tr>
+                            <tr class="title2">
+                                <td class="produit"><img src="Fiches de produits/photos fiche de produit/beauté6.jpg" alt="beauté6" class="photo"></td>
+                                <td class="produit">Le Kohle de désert</td>
+                                <td class="produit"><span>1</span></td>
+                                <td class="produit" id="prix">350 Dhs</td>
+                            </tr>
+                            <tr class="title2">
+                                <td class="produit"><img src="Fiches de produits/photos fiche de produit/coussin7.jpg" alt="coussin7" class="photo"></td>
+                                <td class="produit">Coussins marocain modèrne </td>
+                                <td class="produit"><span>1</span></td>
+                                <td class="produit" id="prix">5999 Dhs</td>
+                            </tr>
+                            <tr class="title2">
+                                <td class="produit"><img src="Fiches de produits/photos fiche de produit/coussin1.jpg" alt="coussin1" class="photo"></td>
+                                <td class="produit">Coussins marocain traditionnels </td>
+                                <td class="produit"><span>4</span></td>
+                                <td class="produit" id="prix">2999 Dhs</td>
+                            </tr>
+                            <tr class="title2">
+                                <td class="produit"><img src="Fiches de produits/photos fiche de produit/poterie5.jpg" alt="poterie5" class="photo"></td>
+                                <td class="produit">Vase en poterie</td>
+                                <td class="produit"><span> 2 </span></td>
+                                <td class="produit" id="prix">3599 Dhs</td>
+                            </tr>
+                            <tr class="hr">
+                                <td id="total">Total</td><td colspan="2"></td><td class="td" id="prix">90.543 Dhs</td>
+                            </tr>
+                            <tr>
+                                <td colspan="4"><button class="btn">Validée</button></td>
+                            </tr>
+                        </table> 
+                    </div>
+                
+                    <div class="B" id="Paiement">
+                        <div class="C" >
+                            <table id="table3" width="142%">
+                                    <tr class="title3">
+                                        <td class="b">Paiement</td>
+                                    </tr>
+                                    <tr>
+                                        <td><div class="methode">Méthode de paiemenet</div></td></tr>
+                                    <tr>
+                                        <td>
+                                            <div id="divPaiement">
+                                            
+                                            <label>Choisir un mode de paiement :</label><br>
+                                            <select id="payment-method" name="payment-method" width="300px">
+                                                <option value="">Choisissez un mode de paiement</option>
+                                                <option value="credit-card" class="cart">Carte de Crédit</option>
+                                                <option value="paypal">PayPal</option>
+                                                <option value="bank-transfer">Virement Bancaire</option>
+                                                <option value="master-cart">Master-card</option>
+                                                <option value="visa">Visa</option>
+                                                <option value="master-cart">cash +</option>
+                                            </select>
+                                            
+                                            </div> 
+                                        </td>
+                                    </tr>   
+                                    <tr>
+                                        <td><button type="submit">Confirmer ma commande</button></td>
+                                    </tr>   
+                            </table>                    
+                        </div>
+                    </div>         
+                </div>
+            
+            </div>
+        </form>
+    </div>
+    
+    <footer class="footer">
+        <div class="logo">
+            <img src="photos footer and header/logo.jpeg" class="image">
+        </div>
+        <p class="p1">L'Artisanat du maroc</p>
+        <div class="all">
+            <div class="D">
+                <div class="links">
+                    <p>Plan de site</p>
+                    <ul class="L">
+                        <li><a href="Accueil.html">Accueil</a></li>
+                        <li><a href="Catalogue de produits.html">Catalogue de produits</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="se connecter.html#se connecter">Mon compte</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="Nous">
+                    <p class="p2">Ce qui concerne notre plateforme</p>
+                    <ul class="L2">
+                        <li><a href="Qui somme nous.html">Qui sommes nous?</a></li>
+                        <li><a href="Accueil.html#categories">Catégorie</a></li>
+                        <li><a href="#">Politique de protection des donnees personnelles </a></li>
+                        <li><a href="Contact.html">Contactez nous</a></li>
+                    </ul>
+                </div>
+                <div class="Num">
+                    <p class="p3">Contact</p>
+                    <ul>
+                        <li class="LI">Av chahid hassan ben ahmed toto <span class="B"> qu ZAOUIA SAFI-MAROC</span></li>
+                        <li class="n"><i class='bx bxs-phone'>:</i>&nbsp;&nbsp;+212 (0) 501 023 231</li>
+                        <li class="n"><i class='bx bxs-mobile-vibration'>:</i>&nbsp; +212 (0) 604 458 198 </li>
+                        <li><i class='bx bxl-gmail' id="email">:</i>&nbsp;&nbsp;<input type="email" placeholder="Entrez votre G-mail"> </li>
+                    </ul>
+                </div>
+                    <div class="livraison">
+                        <p class="p4">Livraison et payement</p>
+                        <ul>
+                            <li><a href="Commande et Paiement.html#Livraison">Livraison</a></li>
+                            <li><a href="Commande et Paiement.html#Paiement">Payement</a></li>
+                            <li>
+                                <ul class="flex">
+                                    <li class="visa"><a href="Commande et Paiement.html#Paiement"><img src="photos footer and header/Visa-e-Mastercard.jpg"class="IMG1"></a></li>
+                                    <li><a href="Commande et Paiement.html#Paiement"><img src="photos footer and header/av2rv3z2f.jpg" class="IMG2"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ICONES">
+                <p class="p5">Vous pouvez visiter nos comptes sur ces réseaux sociaux</p>
+                <a href="#"><i class="bi bi-facebook" style="color: #1877F2;" id="facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram" style="color: #E1306C;" id="instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin" style="color:  #0077B5;" id="linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter" style="color: #1DA1F2;" id="twitter"></i></a>
+                <a href="#"><i class="bi bi-pinterest" style="color: #E60023;" id="pinsterest"></i></a>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="codes js/Commande.js"></script>
+</body>
+</html>

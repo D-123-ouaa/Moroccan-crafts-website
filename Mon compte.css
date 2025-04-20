@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.wrapper{
+    height: 1050px;
+}
+
+.COMPTE h1{
+    text-align: center;
+    margin-top:100px;
+    color:rgb(71, 16, 16);
+    
+}
+
+.COMPTE .buttons{
+    margin-left:100px;
+    margin-top: 100px;
+}
+.buttons{
+    display: flex;
+    position: relative;
+    left: -60px;
+    margin-bottom: 80px;
+}
+.B1 button{
+    width: 300px;
+    height: 70px;
+    background-color: rgb(71, 16, 16);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin:20px;
+    transition: all 0.3s ease;
+}
+.B1 button:hover{
+    background: rgb(59, 1, 1);  
+}
+.B1 button:active{
+    transform: scale(0.98);
+}
+.B1 a{
+    color:white;
+    text-decoration: none;
+}
+.B1 a:hover{
+    color:white;
+}
+@media screen and (max-width: 600px){
+    .buttons{
+        position: relative;
+        left: -15px;
+    }
+}

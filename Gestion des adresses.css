@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.gestion{
+    border: 1px solid #a94803;
+    border-radius: 10px;
+    width:500px;
+    text-align: center;
+    margin-top:20px;
+    margin-bottom: 50px;
+    background-color: rgb(250, 235, 215);
+    padding:40px;
+}
+.GESTION h1{
+    text-align: center;
+    margin:50px;
+    font-size: 30px;
+    color:#7c3737;
+    font-weight: 500;
+}
+.gestion p{
+    font-weight: 700;
+}
+.gestion button{
+    width: 100px;
+    color:white;
+    height: 50px;
+    background-color: rgb(219, 70, 70);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin:20px 0px;
+    transition: all 0.3s ease;
+}
+.retour{
+    text-align: left;
+    position: relative;
+    margin-bottom: 20px;
+}
+.gestion button:hover{
+    background-color: rgb(216, 52, 52);  
+}
+.gestion button:active{
+    transform: scale(0.98);
+}
+.gestion button a{
+    color: white;
+}
+.gestion button a:hover{
+    color: white;
+}
+.gestion #I1{
+    position:relative;
+    top:22px;
+    left: 5px;
+    color: rgb(71, 16, 16);
+    font-size: 18px;
+}
+.gestion .retour{
+    position:relative;
+    top: 20px;
+    left:10px;
+}
+.gestion a{
+    color:rgb(71, 16, 16);
+    text-decoration: none;
+    font-size: 20;
+}
+.gestion a:hover{
+    color:rgb(71, 16, 16);
+}
+.gestion .b{
+    width:200px;
+    height: 70px;
+    background-color: rgb(71, 16, 16);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    margin:0px -0px;
+    transition: all 0.3s ease;
+}
+.gestion .b:hover{
+    background: rgb(59, 1, 1);  
+}
+.gestion .b:active{
+    transform: scale(0.98);
+}

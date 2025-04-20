@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+#info1{
+    background-color: #faebd7;
+    height: 630px;
+}
+.titre-produit{
+    margin-bottom: 25px;
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    height: 40px;
+    line-height: 40px;
+    width: 104%;
+    color: #471010;
+    padding-left: 10px;
+    position: relative;
+    left: -13px;
+    background-color: #f1b78d;
+}
+.discription-produit{
+    font-size: 15px;
+}
+.prix-produit{
+    color: #471010; 
+    font-weight: 500;
+    padding: 15px 0;
+    font-size: x-large;
+}
+.quantitee{
+    margin: 10px;
+}
+.quantitee label{
+    font-size: 17px;
+    font-weight: 500;
+}
+input[type="number"] {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+input[type="number"]:focus {
+    border-color: #860101;
+    outline: none;
+}
+input[type="number"]:invalid {
+    border-color: red;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+.au-panier{
+    width: 250px;
+    height: 50px;
+    line-height: 15px;
+    margin:20px 40px;
+    background-color: #471010;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+.au-panier:hover{
+    background: #3b0101;  
+}
+.au-panier:active{
+    transform: scale(0.98);
+}
+.au-panier a{
+    color: white;
+    text-decoration: none;
+}
+.au_wishlist{
+    width: 250px;
+    height: 50px;
+    line-height: 15px;
+    background-color: #faebd7;
+    border: #471010 1px solid;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+.au_wishlist a{
+    color: #471010;
+    text-decoration: none;
+}
+.au_wishlist:hover {
+    background-color: #471010;
+}
+.au_wishlist:hover a{
+    color:white;
+}
+.au_wishlist:active{
+    transform: scale(0.98);
+}
+.avis{
+    position: relative;
+    left: 20px;
+}
+.avis i{
+    position: relative;
+    left:0;
+}
+#photo{
+    height: 250px;
+    margin: 5px;
+    width: 300px;
+}
+.card{
+    width: 310px;
+    background-color: #faebd7;
+    border: none;
+    transition: all .7s ease;
+}
+.card:hover{
+    background-color: #f1d2bc;
+    transform: scale(1.06);
+    box-shadow: 5px 5px 10px grey,-5px -5px 10px grey;
+}
+h2{
+    color: #471010;
+    font-size: xx-large;
+    text-align: center;
+    margin: 60px 0;
+    position: relative;
+    top: 35px;
+}
+.card h5 {
+    font-size: 18px;
+    font-weight: 500;
+}
+.card-prix{
+    color: #471010;
+    font-weight: 500;
+}
+.card-body button{
+    height: 50px;
+    line-height: 37px;
+    margin:10px 40px;
+    background-color: #471010;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .3s ease;
+    position: relative;
+    left: 10px;
+    width: 180px;
+}
+.card-body button:hover{
+    background-color: #3b0101;
+    color: white;
+}
+.card-body button:active{
+    transform: scale(0.98);
+}
+.card-body a{
+    color: white;
+    text-decoration: none;
+}
+.card-prix{
+    margin: 15px 0;
+}
+#S{
+    flex-wrap: wrap;
+}
+@media screen and (max-width: 600px){
+    .card{
+        width: 450px;
+        left: 30px;
+        margin: 15px 0;
+    }
+    #photo{
+        width: 440px;
+        height: 300px;
+    }
+    .card-body button{
+        left: 85px;
+    }
+    .au-panier{
+        margin-left: 27%;
+    }
+    .au_wishlist{
+        margin-left: 27%;
+    }
+}

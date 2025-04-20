@@ -1,0 +1,282 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.wrapper{
+    height: 1050px;
+}
+.panier{
+    display: flex;
+    align-content: center;
+    position: relative;
+    top: 100px;
+}
+.panier .title1{
+    height: 150px;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 500;
+}
+.d{
+    position: relative;
+    left: 8px;
+    top: -30px;
+}
+.a{
+    text-align: center;
+    top: -30px;
+    position: relative;
+}
+.panier table{
+    background-color: #faebd7;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+.b{
+    width: 40%;
+    text-align: center;
+    position: relative;
+    left: -40px;
+}
+.c, .e{
+    width: 35%;
+    text-align: center;
+}
+.e{
+    color: rgb(71, 16, 16);
+}
+.photo{
+    border-radius: 50%;
+    border: 2px white solid;
+}
+table tr{
+    height: 60px;
+}
+.title2{
+    height: 40px;
+    background-color: #f1b78d;
+    position: relative;
+    top: -35px;
+    color: #471010;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+}
+table tr td i {
+    position: relative;
+    left: 0;
+    color: rgb(71, 16, 16);
+}
+table tr td i:hover{
+    transform: scale(1.1);
+    color: rgb(134, 1, 1);
+}
+.title3:hover, .title4:hover{
+    background: rgba(0, 0, 0, 0.1);
+}
+.title3, .title4{
+    transition: .2s ease-in-out;
+}
+.title4{
+    border-bottom: 1px solid gray;
+}   
+#img{
+    position: relative;
+    left: -50px;
+}
+.title5{
+    height: 150px;
+    text-align: center;
+}
+.title5 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+.title5 td button{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(71, 16, 16);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+table{
+    position: relative;
+    left: -140px;
+}
+.title5 td button:hover{
+    background: rgb(59, 1, 1);  
+}
+.title5 td button:active{
+    transform: scale(0.98);
+}
+#table2{
+    position: relative;
+    left: 70px;
+}
+.f{
+    position: relative;
+    left: 10px;
+    text-transform: none;
+}
+.g{
+    text-align: right;
+    position: relative;
+    right: 10px;
+}
+#table2 label{
+    padding: 0px;
+    font-size: large;
+    font-weight: 500;
+}
+#table2 input{
+    position: relative;
+    margin:10px 40px;
+}
+.title6{
+    position: relative;
+    top: 0;
+    left: 15px;
+    height: 300px;
+    border-bottom: 1px solid gray;
+}
+.title6 #number{
+    margin: 20px;
+    left: 20px;
+}
+input[type="number"] {
+    width: 250px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f4f4f4;
+}
+input[type="number"]:focus {
+    border-color: rgb(134, 1, 1);
+    outline: none;
+}
+input[type="number"]:invalid {
+    border-color: red;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -webkit-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+}
+input[type="text"] {
+    width: 250px; 
+    padding: 10px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+input[type="text"]:focus {
+    border-color: #860101;
+    outline: none; 
+}
+input[type="text"]:invalid {
+    border-color: red; 
+}
+input[type="text"]::placeholder {
+    color: #aaa; 
+}
+.title6 #code{
+    margin: 20px;
+    left: 20px;
+}
+input[type="submit"] {
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    top: -8px;
+    left: 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+input[type="submit"]:hover {
+    background-color: rgb(216, 52, 52); 
+}
+input[type="submit"]:active {
+    transform: scale(0.98);
+}
+input[type="submit"]:focus {
+    outline: none; 
+}
+#title7{
+    height: 90px;
+    text-align: center;
+}
+#title7 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+#title7 td button{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(71, 16, 16);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    transition: all .3s ease;
+}
+#title7 td button:hover{
+    background: rgb(59, 1, 1);  
+}
+#title7 td button:active{
+    transform: scale(0.98);
+}
+.title8{
+    font-size: 16px;
+    font-weight: 500;
+}
+.i{
+    position: relative;
+    left: 10px;
+}
+@media screen and (max-width: 600px){
+    .panier{
+        display: block;
+    }
+    .wrapper{
+        height: 1600px;
+    }
+    .panier .table-commande{
+        top: 10px;
+        position: relative;
+        left: -6%;
+        width: 70%;
+    }
+    #table1{
+        width: 100%;
+        left: 0;
+        position: relative;
+    }
+    #img{
+        position: relative;
+        left: -20px;
+    }
+}

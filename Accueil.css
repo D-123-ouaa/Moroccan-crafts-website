@@ -1,0 +1,749 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: auto;
+}
+.wrapper{
+    width:100%;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    background-image:url(photos\ accueil/maison\ marocaine.jpeg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center center;
+    background-attachment: fixed;
+    height:700px;
+    width: 100%;
+}
+.p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 300px;
+    text-transform: uppercase;
+    font-size: 70px;
+    color: rgb(230, 206, 177);
+    text-align: center;
+    white-space: pre;
+    right: 100px;
+    letter-spacing: 7px;
+    
+}
+#imgs1 {
+    width: 240px;
+    height: 250px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.i-p{
+    display: inline;
+}
+.produit-phare{
+    margin: 50px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.produit1{
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.produit2{
+    width: 250px;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.produit3{
+    width: 250px;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.produit4{
+    width: 250px;
+    margin: 10px 20px;
+    border-radius: 5px;
+}
+.produit5{
+    width: 250px;
+    margin: 10px 20px;
+    
+}
+.phare .panier i{
+    position: relative;
+    left: 0;
+    right: 10px;
+}
+.produit h1{
+    position: relative;
+    left: 550px;
+    width: 400px;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 50px 0;
+    color: chocolate;
+}
+.lines {
+    background-color: rgb(250, 242, 226);
+    border-radius: 5px;
+    width: 250px;
+    padding-bottom: 20px;
+    transition: all 0.9s ease;
+    cursor: pointer;
+}
+.lines p, .prix, .panier{
+    padding:0 10px;
+}
+.lines i{
+    color: black;
+}
+
+.panier, i p{
+    padding-bottom: 20px;
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.panier a, .i-p:hover{
+   color: chocolate;
+}
+.prix{
+    color: chocolate;
+    position: relative;
+    left: 0;
+}
+
+.produit-phare1:hover #p1 {
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+} 
+.produit-phare2:hover #p2{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+} 
+.produit-phare3:hover #p3{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+} 
+.produit-phare4:hover #p4{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+} 
+.produit-phare5:hover #p5{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+}
+.Produit1 .cover1{
+    background: url(photos\ accueil/cover\ tapie.jpeg);
+    background-position: center;
+    width: 455px;
+    text-align: center;
+    height: 800px;
+    color: white;
+    margin: 0 30px 20px 50px;
+    border-radius: 10px;
+} 
+.Tapie h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 60px 0;
+    color: chocolate;
+    text-transform: uppercase;
+}
+
+.cover1 span{
+    display: block;
+    position: relative;
+    align-content: center;
+    width: 455px;
+    height: 800px;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+#imgs2{
+    width: 300px;
+    height: 250px;
+    border-radius: 5px;
+    
+}
+.lien i{
+    color: black;
+}
+.Produit1{
+    display: flex;
+    justify-content: space-around;
+}
+.sous-cover{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px 100px 0 140px;   
+}
+.lien{
+    margin: 0 30px;
+    background-color: rgb(250, 242, 226);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    transition: all 0.9s ease;
+}
+.sous-cover .panier i{
+    position: relative;
+    left: 0;
+    padding: 0 10px 0 0;
+}
+.lien p, .prix, .panier{
+    padding:0 10px;
+}
+.sous1:hover #t1{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+}
+.sous2:hover #t2{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+}
+.sous3:hover #t3 {
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+}
+.sous4:hover #t4{
+    background-color: white;
+    box-shadow: 10px 10px 10px rgb(250, 242, 226), -10px -10px 10px rgb(250, 242, 226);
+    transform: scale(1.1);
+}
+.Produit2{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 50px;
+}
+.Produit2 .cover1{
+    background: url(photos\ accueil/cover\ poterie.jpeg);
+    background-position: center;
+    width: 455px;
+    text-align: center;
+    height: 800px;
+    color: white;
+    margin: 30px 30px 20px 50px;
+    border-radius: 10px;
+}
+.sous-cover2{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 60px 100px 0 140px;   
+}
+.sous-cover2 .panier i{
+    position: relative;
+    left: 0;
+    padding: 0 10px 0 0;
+}
+.Produit3{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 50px;
+}
+.Produit3 .cover1{
+    background: url(photos\ accueil/cover\ accessoire.jpg);
+    background-position: center;
+    width: 455px;
+    text-align: center;
+    height: 800px;
+    color: white;
+    margin: 50px 30px 20px 100px;
+    border-radius: 10px;
+}
+.sous-cover3{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 50px 0 120px;   
+}
+.sous-cover3 .panier i{
+    position: relative;
+    left: 0;
+    padding: 0 10px 0 0;
+}
+#c3{
+    width: 310px;
+}
+#imgs3{
+    width: 310px;
+    height: 250px;
+    border-radius: 5px;
+}
+.Produit4{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 50px;
+}
+.Produit4 .cover1{
+    background: url(photos\ accueil/cover\ beaute.jpg);
+    background-position: center;
+    width: 455px;
+    text-align: center;
+    height: 800px;
+    color: white;
+    margin: 50px 30px 20px 100px;
+    border-radius: 10px;
+}
+.sous-cover4{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 50px 0 120px;   
+}
+.sous-cover4 .panier i{
+    position: relative;
+    left: 0;
+    padding: 0 10px 0 0;
+}
+.Produit5{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    right: 50px;
+}
+.Produit5 .cover1{
+    background: url(photos\ accueil/cover\ \ coussin.jpg);
+    background-position: center;
+    width: 455px;
+    text-align: center;
+    height: 800px;
+    color: white;
+    margin: 50px 30px 20px 100px;
+    border-radius: 10px;
+}
+.sous-cover5{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 80px 50px 0 120px;   
+}
+.sous-cover5 .panier i{
+    position: relative;
+    left: 0;
+    padding: 0 10px 0 0;
+}
+.cover1 a{
+    text-decoration: none;
+    color: white;
+}
+.cover1 a:hover{
+    color: white;
+}
+.container .pp{
+    padding: 0 20px;
+    font-weight: 400;
+    font-size: 20px;
+}
+.container .stars i{
+    position: relative;
+    left: 5px;
+}
+.container .stars{
+    position: relative;
+    left: 30px; 
+    padding: 20px 0;
+}
+.container .stars .one{
+    position: relative;
+    left: 5px;
+    font-size: 14px;
+}
+#ratingDistribution {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+#ratingDistribution tr .input {
+    width: 400px;
+    position: relative;
+    left: 10px;
+    top: 5px;
+}
+.container .control-avis{
+    position: relative;
+    left: 0px;
+}
+input[type="range"] {
+    -webkit-appearance: none;  
+    -moz-appearance: none;     
+    appearance: none;          
+    width: 250px;               
+    height: 10px;              
+    background: #ddd;         
+    border-radius: 5px;      
+    outline: none;            
+    cursor: pointer;          
+}
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #f79404;
+    border-radius: 30%;
+    border: none;
+    transition: background 0.3s ease;
+}
+input[type="range"]::-ms-thumb {
+    width: 15px;
+    height: 15px;
+    background: #f79404;
+    border-radius: 30%;
+    border: none;
+    transition: background 0.3s ease;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; 
+    appearance: none;
+    width: 15px;              
+    height: 15px;            
+    background: #f79404;      
+    border-radius: 30%;       
+    border: none; 
+    transition: background 0.3s ease;
+}
+input[type="range"]::-moz-range-track {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+}
+input[type="range"]::-ms-track {
+    height: 10px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    border-color: transparent;
+    border-width: 6px 0;
+}
+.part3 h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 60px 0;
+    color: chocolate;
+    text-transform: uppercase;
+}
+#A-search{
+    width: 600px;
+    height: 45px;
+    outline: none;
+    border-radius: 5px;
+    border: black;
+    box-shadow: 5px 5px 15px rgb(198, 197, 197),-5px -5px 15px rgb(198, 197, 197);
+}
+.commentaires .avis-search i {
+    color: black;
+    position: relative;
+    left: 37px;
+    top: 3px;
+    cursor: pointer;
+}
+.commentaires {
+    width: 630px;
+    height: auto;
+}
+.recents i {
+    position: relative;
+    left: 0px;
+    font-size: 25px;
+    top: 5px;
+}
+.recents{
+    position: relative;
+    top: 30px;
+    left: 40px;
+    background-color: white;
+    width:  190px;
+    height: 40px;
+    padding-left: 20px;
+    border:1px solid rgb(180, 178, 178);
+    border-radius: 20px;
+    padding-top: 2px;
+}
+.recents a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+}
+.recents a:hover{
+    color: black;
+    font-size: 16px;
+}
+.avis{
+    position: relative;
+    top: 90px;
+    padding: 20px 0;
+    border-top: 1px solid rgb(180, 178, 178);
+}
+.photo{
+    width: 50px;
+    border-radius: 50%;
+    height: 50px;
+}
+.nom span{
+    position: relative;
+    top: -8px;
+    left: 8px;
+}
+.reaction {
+    position: relative;
+    left: 0px;
+    padding-bottom: 4px;
+}
+.produit{
+    position: relative;
+    top: 10px;
+    font-weight: 500;
+}
+.avis3{
+    position: relative;
+    top: 90px;
+    padding: 20px 0;
+    border-top: 1px solid rgb(180, 178, 178);
+}
+.voirplus{
+    position: relative;
+    top: 100px;
+    left: 40%;
+}
+.voirplus button{
+    width: 200px;
+    background-color: rgb(63, 15, 15);
+    padding: 8px 0;
+    border-radius: 10px;
+}
+.part4 #blog{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    margin: 60px 0;
+    color: chocolate;
+    text-transform: uppercase;
+    position: relative;
+    top: 100px;
+}
+.M{
+    width: 390px;
+    height: 300px;
+    margin: 5px;
+    border-radius: 5px;
+}
+.blog1{
+    width: 400px;
+    background-color: white;
+    height: 540px;
+    margin: 55px;
+    margin-top: 80px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid rgb(180, 178, 178);
+    transition: all 0.6s ease;
+}
+#blog1id:hover{
+    box-shadow: 5px 5px 15px rgb(198, 197, 197),-5px -5px 15px rgb(198, 197, 197);
+    transform: scale(1.05);
+}
+#blog2id:hover{
+    box-shadow: 5px 5px 15px rgb(198, 197, 197),-5px -5px 15px rgb(198, 197, 197);
+    transform: scale(1.05);
+}
+#blog3id:hover{
+    box-shadow: 5px 5px 15px rgb(198, 197, 197),-5px -5px 15px rgb(198, 197, 197);
+    transform: scale(1.05);
+}
+.tp, .tp2{
+    padding: 10px;
+}
+.blog1 button{
+    width: 130px;
+    border-radius: 10px;
+    background-color: rgb(63, 15, 15);
+}
+.blog1 button a{
+    text-decoration: none;
+    color: white;
+}
+#btn1{
+    position: relative;
+    top: 30px;
+}
+#btn2{
+    position: relative;
+    top: 7px;
+}
+#btn3{
+    position: relative;
+    top: 55px;
+}
+.part4{
+    margin-bottom: 30px;
+}
+.for-mobile{
+    color: rgb(107, 24, 24);
+    font-size: x-large;
+    text-align: center;
+    margin: 30px 0;
+    display: none;
+}
+@media screen and (max-width: 600px){
+    .p{
+        font-size: 37px;
+        position: relative;
+        top: 420px;
+    }
+    .produit h1{
+        left: 80px;
+    }
+    .lines{
+        width: 230px;
+    }
+    #imgs1{
+        width: 220px;
+    }
+    .produit-phare1{
+        margin:0 -8px ;
+    }
+    .produit-phare2{
+        margin:0 -8px ;
+    }
+    .produit-phare3{
+        margin:0 -8px ;
+    }
+    .produit-phare4{
+        margin:0 -8px ;
+    }
+    .produit-phare5{
+        position: relative;
+        left: 130px;
+    }
+    .produit-phare{
+        position: relative;
+        left: -5px;
+        flex-wrap: wrap;
+    }
+    .Produit1 {
+        display: block;
+        position: relative;
+    }
+    .Produit1 .cover1{
+        height: 500px;
+        margin-left: 60px;
+    }
+    .cover1 span{
+        height: 500px;
+    }
+    #imgs2{
+        width: 220px;
+    }
+    .lien{
+        width: 230px;
+
+    }
+    .sous-cover{
+        margin: 0;
+    }
+    .sous1{
+        margin: 10px 0;
+    }
+    .sous2{
+        margin: 10px 0;
+    }
+    .sous3{
+        margin: 10px 0;
+    }
+    .sous4{
+        margin: 10px 0;
+    }
+    .Produit2 {
+        display: block;
+        position: relative;
+    }
+    .Produit2 .cover1{
+        height: 500px;
+        margin-left: 110px;
+    }
+    .sous-cover2{
+        margin: 20px 0;
+        position: relative;
+        left: 50px;
+    }
+    .for-mobile{
+        display: block;
+    }
+    .Produit3 {
+        display: block;
+        position: relative;
+    }
+    .Produit3 .cover1{
+        height: 500px;
+        margin-left: 110px;
+        margin-top: 20px;
+    }
+    .sous-cover3{
+        margin: 20px 0;
+        position: relative;
+        left: 50px;
+    }
+    #imgs3{
+        width: 220px;
+    }
+    .Produit4 {
+        display: block;
+        position: relative;
+    }
+    .Produit4 .cover1{
+        height: 500px;
+        margin-left: 110px;
+        margin-top: 20px;
+    }
+    .sous-cover4{
+        margin: 20px 0;
+        position: relative;
+        left: 50px;
+    }
+    .Produit5 {
+        display: block;
+        position: relative;
+    }
+    .Produit5 .cover1{
+        height: 500px;
+        margin-left: 110px;
+        margin-top: 20px;
+    }
+    .sous-cover5{
+        margin: 20px 0;
+        position: relative;
+        left: 50px;
+    }
+    .control-avis{
+        display: none;
+    }
+    .commentaires{
+        width: 580px;
+    }
+    #A-search{
+        width: 580px;
+    }
+    .commentaires .avis-search i{
+        position: relative;
+        left: 20px;
+        top: 35px;
+    }
+    .voirplus{
+        position: relative;
+        left: 190px;
+    }
+    .blogs{
+        flex-wrap: wrap;
+        margin: 0 40px;
+    }
+}

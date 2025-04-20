@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+}
+body{
+    height: auto;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+.hero h1{
+    text-align: center;
+    font-size: 35px;
+    font-weight: 500;
+    color: #471010;
+}
+.hero p{
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+.hero {
+    position: relative;
+    top: 30px;
+}
+.content h2{
+    font-size: 28px;
+    color: #7c3737;
+    text-transform: uppercase;
+}
+.grand{
+    position: relative;
+    top: 20px;
+}
+.about-text{
+    font-size: 18px;
+}
+.ps{
+    position: relative;
+    top: 25px;
+}
+.valeur i{
+    position: relative;
+    left: 0;
+}
+.Nosvaleurs{
+    background-color: rgb(244, 229, 212);
+}
+.section-title{
+    color: #7c3737;
+    text-transform: uppercase;
+    top: 15px;
+    position: relative;
+}
+.sous-titre{
+    color: #471010;
+    font-size: x-large;
+}
+.valeurs{
+    top: 20px;
+    position: relative;
+    margin-bottom: 30px;
+}
+.valeurs p{
+    font-weight: 500;
+}
+@media screen and (max-width: 600px){
+    .ps{
+        text-align: center;
+        top: 0;
+    }
+    .photo{
+        height: 400px;
+    }
+}

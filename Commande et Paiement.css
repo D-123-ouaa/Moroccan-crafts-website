@@ -1,0 +1,380 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Arrows:wght@400..700&family=Inconsolata:wght@200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    font-family: "Poppins",serif;
+    box-sizing: border-box;
+}
+body{
+    height: 800px;   
+    background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;   
+}
+.wrapper{
+    height: 1200px;
+}
+.Livraison{
+    display: flex;
+    align-content: center;
+    position: relative;
+    top: 70px;
+    border-collapse: collapse;
+}
+#table3{
+    background-color: #faebd7;
+}
+.A{
+    width: 80%;
+    display: flex;
+    left: -100px;
+    position: relative;
+}
+.title1{
+    height: 110px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 500;
+    width: auto;
+}
+.title3{
+    height: 90px;
+    position: relative;
+    box-sizing: border-box;
+    font-size: 17px;
+    font-weight: 500;
+    width: auto;
+}
+.b{
+    left: 10px;
+    position: relative;
+    top: -15px;
+}
+.methode{
+    height: 40px;
+    background-color: #f1b78d;
+    color: rgb(71, 16, 16);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    top: -24px;
+    border-collapse: collapse;
+}
+.d{
+    left: 10px;
+    position: relative;
+    top: -20px;
+}
+#table2 .produit{
+    padding: 8px 0;
+    text-align: center;
+}
+.information{
+    height: 40px;
+    background-color: #f1b78d;
+    color: rgb(71, 16, 16);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    top: -25px;
+    position: relative;
+}
+.c{
+    position: relative;
+    left: 10px;
+}
+
+.Livraison input{
+    width: 500px; 
+    height:40px;
+    margin:10px 20px;
+    padding-left:40px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+
+.Livraison input:focus {
+    border-color: #860101;
+    outline: none; 
+}
+.form td i{
+    color:#aaa;
+    position: relative;
+    top:48px;
+    font-size:20px;
+}
+#table1{
+    background-color: #faebd7;
+}
+#table1 #i1{
+    position: relative;
+    left: -185px;
+}
+#table1 #i2{
+    position: relative;
+    left: -60px;
+}
+#table1 #i3{
+    position:relative;
+    left: -95px;
+}
+#table1 #i4{
+    position:relative;
+    left:-75px;
+}
+#table1 #i5{
+    position: relative;
+    left:-140px;
+}
+#table1 #i6{
+    position: relative;
+    left:-80px;
+}
+#table1 #i7{
+    position: relative;
+    left:-230px
+}
+input::placeholder {
+    color: #aaa; 
+}
+#table1 button{
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    left: 2px;
+    margin: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+#table1 button:hover {
+    background-color: rgb(216, 52, 52); 
+}
+#table1 button:active {
+    transform: scale(0.98);
+}
+#table1 button:focus {
+    outline: none;
+}
+#table1{
+    padding:0 10px;
+}
+.a{
+    position:relative;
+    top:10px;
+}
+#table1 label{
+    font-size: large;
+    font-weight: 500;
+    margin: 5px 20px;
+}
+.A2{
+    margin-top:101px;
+    margin-left:20px
+}
+.A2 .tr1{
+    height: 40px;
+    background-color: #f1b78d;
+    color: rgb(71, 16, 16);
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    top: -24px;
+    border-collapse: collapse;
+}
+#table2 {
+    background-color: rgb(250, 235, 215);
+    position: relative;
+    top: -32px;
+}
+#table2 .td{
+    width: 500px;
+    text-align: center;
+}
+.A2 .hr td{
+    border-top: 1px solid #9a9999;
+    padding-top: 10px;
+    margin-top: 20px;
+}
+#total{
+    padding-left: 40px
+}
+.photo{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#table2 #td1{
+    margin-top:40px
+}
+#prix{
+    color: rgb(71, 16, 16);
+    font-size: 15px;
+    font-weight: 500;
+}
+#total{
+    font-size: 15px;
+    font-weight: 500;
+}
+#table2 .hr{
+    border-top: 1px solid gray;
+    padding: 20px;
+}
+#table2 span{
+    border:solid 1px rgb(71, 16, 16);
+    background-color: white;
+    padding: 5px 15px;
+}
+#table2 button{
+    padding: 8px 20px;
+    font-size: 16px; 
+    color: white; 
+    background-color: rgb(219, 70, 70); 
+    border: none; 
+    border-radius: 5px; 
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease; 
+}
+#table2 button:hover {
+    background-color: rgb(216, 52, 52); 
+}
+#table2 button:active {
+    transform: scale(0.98);
+}
+#table2 button:focus {
+    outline: none;
+}
+.B{
+    margin-top:550px;
+    position:relative;
+    left:-280px;
+}
+.paiement{
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.methode{
+    height:35px;
+    line-height: 35px;
+    padding-left:5px;
+    background-color: rgb(241, 183, 141);
+    color: rgb(71, 16, 16);
+    text-transform: uppercase;
+    font-size: 15px;
+    margin-top: 10px;
+    font-weight: 40px;
+}
+.B label{
+    margin-left:25px ;
+    margin-top:5px;
+    margin-bottom:5px;
+    font-size: large;
+    font-weight: 500;
+}
+.B select{
+    width: 300px; 
+    height:40px;
+    margin-top:10px ;
+    margin-left:25px;
+    padding-left:40px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #333; 
+    transition: border-color 0.3s ease; 
+}
+.B select:focus{
+    border-color: #860101;
+    outline: none; 
+}
+option{
+    padding-left:40px;
+    font-size: 16px; 
+    border: 2px solid #ccc; 
+    border-radius: 8px;
+    background-color: #f4f4f4; 
+    color: #9a8a8a; 
+}
+option:hover{
+    border-color: #860101;
+    outline: none;
+}
+#table3 a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+}
+#table3{
+    position: relative;
+    left: -25px;
+    top: 113px;
+    border-collapse: collapse;
+    background-color: #faebd7;
+}
+#table3 td button{
+    width: 300px;
+    height: 50px;
+    background-color: rgb(71, 16, 16);
+    outline: none;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    margin:20px 0px 20px 150px;
+    transition: all 0.3s ease;
+}
+#table3 td button:hover{
+    background: rgb(59, 1, 1);  
+}
+#table3 td button:active{
+    transform: scale(0.98);
+}
+.btn {
+    margin-top:10px
+}
+@media screen and (max-width: 600px){
+    .A{
+        display:block;
+        width:100%;
+        left: -15px;
+    }
+    .wrapper{
+        height: 2000px;
+    }
+    #table1{
+        width: 100%;
+        left: 0;
+        position: relative;
+    }
+    #table2{
+        width:105%;
+        margin-left:-20px;
+        position: relative;
+        top: -20px;
+        left:0px;
+        box-sizing: border-box;
+    }
+    #table3{
+        width:100%;
+        position:relative;
+        left:280px;
+        top:-560px
+    }
+    .wrapper{
+        height: 2060px;
+    }
+}

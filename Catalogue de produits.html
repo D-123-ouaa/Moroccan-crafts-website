@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le catalogue</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="header catalogue.css">
+    <link rel="stylesheet" href="Catalogue de produits.css">
+    <link rel="stylesheet" href="footer accueil.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper" id="catalogue">
+        <div class="upperheader"> 
+            <div class="container">
+                <div class="nav-logo">
+                    <img src="photos footer and header/logo.jpeg" class="image">
+                </div> 
+                <div class="nav-menu dropdown">
+                    <ul class="menu">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-list"></i></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="Accueil.html">Accueil</a></li>
+                            <li><a class="dropdown-item" href="Catalogue de produits.html">Catalogue de produit</a></li>
+                            <li><a class="dropdown-item" href="Commande et Paiement.html">Commande et paiement</a></li>
+                            <li><a class="dropdown-item" href="blog.html">Blog</a></li>
+                            <li><a class="dropdown-item" href="Contact.html">Contact</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="nav-search">
+                    <input type="search" id="search" placeholder="Rechercher dans notre produits">
+                    <i class='bi bi-search'></i>
+                </div>
+                <div class="nav-button">
+                    <a href="se connecter.html"><i class='bi bi-person'></i></a>
+                    <span class="iconuser"><a href="se connecter.html#se connecter"  id="loginbtn">Se connecter&nbsp;  /</a>
+                    <a href="S'inscrire.html"  id="registerbtn">&nbsp;s'inscrire</a></span>
+                </div>
+                <div class="icon-panier dropdown">
+                    <ul class="Panier">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-cart"></i>0</a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="Panier d'achat.html">Voir le panier</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icon-laguage dropdown">
+                    <ul class="langue">
+                        <li class="nav-item dropdown">
+                            <a class="" href="#"
+                            role="button" data-bs-toggle="dropdown"><i class="bi bi-globe"></i>&nbsp;<span>Langue</span></a>
+                            <ul class="dropdown-menu sous">
+                            <li><a class="dropdown-item" href="#">Français</a></li>
+                            <li><a class="dropdown-item" href="#">Arabe</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container2">
+                <ul>
+                    <li><a href="Accueil.html">Accueil</a></li>
+                    <li><a href="Catalogue de produits.html">Catalogue de produits</a></li>
+                    <li><a href="Commande et Paiement.html">Commande et paiement</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="Contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container">
+            <div class="catalogue">
+                <div class="categories">
+                    <p>Catégories</p>
+                    <div class="category">
+                        <input type="checkbox" id="cat1" name="categories" value="Catégorie 1">
+                        <label for="cat1">Les tapies</label>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox" id="cat2" name="categories" value="Catégorie 2">
+                        <label for="cat2">Les coussins</label>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox" id="cat3" name="categories" value="Catégorie 3">
+                        <label for="cat3">Les poteries</label>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox" id="cat4" name="categories" value="Catégorie 4">
+                        <label for="cat4">Les produits de beauté</label>
+                    </div>
+                    <div class="category">
+                        <input type="checkbox" id="cat5" name="categories" value="Catégorie 5">
+                        <label for="cat5">Les accessoires marocain</label>
+                    </div>
+                    <div>
+                        <input type="submit" value="Valider" class="submit">
+                    </div>
+                </div>
+                <div class="fourchette">  
+                    <p>Limitez le prix</p>
+                    <div class="price-content">
+                        <div>
+                            <label>Min</label>
+                            <p id="min-value">30 Dh</p>
+                        </div>
+                        <div>
+                            <label>Max</label>
+                            <p id="max-value">60000 Dh</p>
+                        </div>
+                    </div>
+                    <div class="range-fill">
+                        <input type="range" class="min-prix" value="100" min="10" max="500" step="100">
+                    </div>
+                </div>
+                <div class="search">
+                    <label for="searching">Mots-clés</label><br>
+                    <input type="search" name="searching" id="a-search" placeholder="Rechercher par nom ou caractéristique">
+                </div>
+            </div>
+            <div class="produits" id="Tapies">
+                <div class="trier">
+                    <select name="Trie" id="select" aria-placeholder="Trier par">
+                        <option value="Trier par" checked>Trier par</option>
+                        <option checked>Prix Croissant</option>
+                        <option checked>Prix Décroissant</option>
+                        <option checked>Nouveautées</option>
+                        <option checked>Avis</option>
+                    </select>
+                </div>
+                <div class="cover-tapis" >
+                    <p>L'art du tapie</p>
+                </div>
+                <div class="Tapies">
+                    <div class="pro1">
+                        <div class="produit" id="tapie1">
+                            <a href="Fiches de produits/Fiche de produit tapie 1.html"><img src="photos catalogue/Tapie 1.jpg" alt="tapie 1" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis en jute </p>
+                            <p class="prix">Prix: 499,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie2">
+                            <a href="Fiches de produits/Fiche de produit tapie 2.html"><img src="photos catalogue/tapie2.jpg" alt="tapie 2" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis en coton</p>
+                            <p class="prix">Prix: 350,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                    <div class="pro2">
+                        <div class="produit" id="tapie3">
+                            <a href="Fiches de produits/Fiche de produit tapie 3.html"><img src="photos catalogue/tapie3.jpg" alt="tapie 3" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis en laine </p>
+                            <p class="prix">Prix: 599,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie4">
+                            <a href="Fiches de produits/Fiche de produit tapie 4.html"><img src="photos catalogue/Tapie 4.jpg" alt="tapie 4" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis en fibres </p>
+                            <p class="prix">Prix: 400,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                    <div class="pro3">
+                        <div class="produit" id="tapie5">
+                            <a href="Fiches de produits/Fiche de produit tapie 5.html"><img src="photos catalogue/tapie5.jpg" alt="tapie 5" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis extérieure</p>
+                            <p class="prix">Prix: 600,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie6">
+                            <a href="Fiches de produits/Fiche de produit tapie 6.html"><img src="photos catalogue/tapie6.jpg" alt="tapie 6" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                            <p class="nom">Tapis en sisal</p>
+                            <p class="prix">Prix: 500,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                    <div class="produit" id="tapie7">
+                        <a href="Fiches de produits/Fiche de produit tapie 7.html"><img src="photos catalogue/tapie7.jpg" alt="tapie 7" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                        <p class="nom">Tapis en bambou</p>
+                        <p class="prix">Prix: 399,99 Dh</p>
+                        <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                    </div>
+                    <div class="produit" id="tapie8">
+                        <a href="Fiches de produits/Fiche de produit tapie 8.html"><img src="photos catalogue/tapie8.jpg" alt="tapie 8" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                        <p class="nom">Tapis en fausse</p>
+                        <p class="prix">Prix: 550,99 Dh</p>
+                        <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                    </div>
+                    <div class="produit" id="tapie9">
+                        <a href="Fiches de produits/Fiche de produit tapie 9.html"><img src="photos catalogue/tapie9.jpg" alt="tapie 9" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
+                        <p class="nom">Tapis tissé à plat </p>
+                        <p class="prix">Prix: 300,99 Dh</p>
+                        <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                    </div>
+                </div>
+                <div class="produits" id="Coussins">
+                    <div class="cover-coussin">
+                        <p>Coussin au Maroc</p>
+                    </div>
+                    <div class="Coussins">
+                        <div class="pro1">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/FIche de produit coussin 1.html"><img src="photos catalogue/coussin1.jpg" alt="coussin " class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin canapé</p>
+                                <p class="prix">Prix: 160,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit coussin 2.html"><img src="photos catalogue/coussin2.jpg" alt="coussin 2" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin rond</p>
+                                <p class="prix">Prix: 290,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro2">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit coussin 3.html"><img src="photos catalogue/coussin3.jpg" alt="poterie 3" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin tricotée</p>
+                                <p class="prix">Prix: 220,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit coussin 4.html"><img src="photos catalogue/coussin4.jpg" alt="poterie 4" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin pour côtée</p>
+                                <p class="prix">Prix: 140,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro3">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit coussin 5.html"><img src="photos catalogue/coussin5.jpg" alt="poterie 5" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin carré</p>
+                                <p class="prix">Prix: 180,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit coussin 6.html"><img src="photos catalogue/coussin6.jpg" alt="poterie 6" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                                <p class="nom">Coussin floraux</p>
+                                <p class="prix">Prix: 240,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="produit" id="tapie7">
+                            <a href="Fiches de produits/Fiche de produit coussin 7.html"><img src="photos catalogue/coussin7.jpg" alt="poterie 7" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                            <p class="nom">Coussin classique</p>
+                            <p class="prix">Prix: 500,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie8">
+                            <a href="Fiches de produits/Fiche de produit coussin 8.html"><img src="photos catalogue/coussin8.jpg" alt="poterie 8" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                            <p class="nom">Coussin pour banc</p>
+                            <p class="prix">Prix: 340,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie9">
+                            <a href="Fiches de produits/Fiche de produit coussin 9.html"><img src="photos catalogue/coussin9.jpg" alt="poterie 9" class="photo" width="280px" height="250px" title="coussin modèrne"></a>
+                            <p class="nom">Coussin à bohème</p>
+                            <p class="prix">Prix: 220,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produits" id="Poterie">
+                    <div class="cover-poterie">
+                        <p>l'art du poterie</p>
+                    </div>
+                    <div class="Poterie">
+                        <div class="pro1">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 1.html"><img src="photos catalogue/Poterie 1.jpg" alt="poterie 1" class="photo" width="280px" height="250px" title="tajine modèrne"></a>
+                                <p class="nom">Carafes</p>
+                                <p class="prix">Prix: 340,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 2.html"><img src="photos catalogue/poterie 2.jpg" alt="poterie 2" class="photo" width="280px" height="250px" title="verres modèrnes"></a>
+                                <p class="nom">Vase en céramique</p>
+                                <p class="prix">Prix: 250,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro2">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 3.html"><img src="photos catalogue/poterie 3.jpeg" alt="poterie 3" class="photo" width="280px" height="250px" title="assiettes modèrnes"></a>
+                                <p class="nom">Tajine en poterie</p>
+                                <p class="prix">Prix: 350,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 4.html"><img src="photos catalogue/poterie 4.jpg" alt="poterie 4" class="photo" width="280px" height="250px" title="pack en poterie"></a>
+                                <p class="nom">Plat décoratif</p>
+                                <p class="prix">Prix: 299,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro3">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 5.html"><img src="photos catalogue/poterie5.jpg" alt="poterie 5" class="photo" width="280px" height="250px" title="en poterie"></a>
+                                <p class="nom">Pot de fleurs</p>
+                                <p class="prix">Prix: 399,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit poterie 6.html"><img src="photos catalogue/poterie6.jpg" alt="poterie 6" class="photo" width="280px" height="250px" title="tajine modèrne"></a>
+                                <p class="nom">Tajine décorative</p>
+                                <p class="prix">Prix: 220,99 Dh</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="produit" id="tapie7">
+                            <a href="Fiches de produits/Fiche de produit poterie 7.html"><img src="photos catalogue/poterie7.jpg" alt="poterie 7" class="photo" width="280px" height="250px" title="assiette modèrne"></a>
+                            <p class="nom">Service en grès</p>
+                            <p class="prix">Prix: 790,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie8">
+                            <a href="Fiches de produits/Fiche de produit poterie 8.html"><img src="photos catalogue/poterie8.jpg" alt="poterie 8" class="photo" width="280px" height="250px" title="verres pour bougies"></a>
+                            <p class="nom">Lampe en céramique</p>
+                            <p class="prix">Prix: 490,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie9">
+                            <a href="Fiches de produits/Fiche de produit poterie 9.html"><img src="photos catalogue/poterie9.jpg" alt="poterie 9" class="photo" width="280px" height="250px" title="verres modèrne"></a>
+                            <p class="nom">Tasse artisanale</p>
+                            <p class="prix">Prix: 140,99 Dh</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produits" id="Beauté">
+                    <div class="cover-beaute">
+                        <p>La beauté Marocaine</p>
+                    </div>
+                    <div class="Beauté">
+                        <div class="pro1">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit beaute 1.html"><img src="photos catalogue/beaute 1.jpg" alt="beaute 1 " class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Huile d'Argan</p>
+                                <p class="prix">Prix: 300,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit beaute 2.html"><img src="photos catalogue/beauté2.jpg" alt="beaute 2" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Huile de Rose </p>
+                                <p class="prix">Prix: 250,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro2">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit beaute 3.html"><img src="photos catalogue/beauté3.jpg" alt="beaute 3" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Huile de Coco</p>
+                                <p class="prix">Prix: 150,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de ptoduit beaute 4.html"><img src="photos catalogue/beauté4.png" alt="beaute 4" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Pack Hammam</p>
+                                <p class="prix">Prix: 2000,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro3">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit beaute 5.html"><img src="photos catalogue/beauté5.jpg" alt="beaute 5" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Huil de Jojobaa</p>
+                                <p class="prix">Prix: 150,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit beaute 6.html"><img src="photos catalogue/beauté6.jpg" alt="beaute 6" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Khôl artisanal</p>
+                                <p class="prix">Prix: 250,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="produit" id="tapie7">
+                            <a href="Fiches de produits/Fiche de produit beaute 7.html"><img src="photos catalogue/beauté7.jpg" alt="beaute 7" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Afer Fassi</p>
+                            <p class="prix">Prix: 150,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie8">
+                            <a href="Fiches de produits/Fiche de produit.html"><img src="photos catalogue/beaute 8.jpg" alt="beaute 8" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Huile d'Amande</p>
+                            <p class="prix">Prix: 300,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie9">
+                            <a href="Fiches de produits/Fiche de produit beaute 9.html"><img src="photos catalogue/beauté9.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Huile de Lavande</p>
+                            <p class="prix">Prix: 199,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produits" id="Accessoires">
+                    <div class="cover-accessoire">
+                        <p>Accessoires Marocaine</p>
+                    </div>
+                    <div class="Accessoire">
+                        <div class="pro1">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/FIche de produit accessoire 1.html"><img src="photos catalogue/accessoire1.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Pack accessoires</p>
+                                <p class="prix">Prix: 900,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit accessoire 2.html"><img src="photos catalogue/accessoire 2.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Cherbil Marocaine</p>
+                                <p class="prix">Prix: 1500,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro2">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit accessoire 3.html"><img src="photos catalogue/accessoire 3.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Collier en or</p>
+                                <p class="prix">Prix: 1240,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit accessoire 4.html"><img src="photos catalogue/accessoire4.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Sac en or</p>
+                                <p class="prix">Prix: 1500,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="pro3">
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit accessoire 5.html"><img src="photos catalogue/accessoire5.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Bague anneau</p>
+                                <p class="prix">Prix: 570,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                            <div class="produit" id="tapie1">
+                                <a href="Fiches de produits/Fiche de produit accessoire 6.html"><img src="photos catalogue/accessoire6.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                                <p class="nom">Bijeaux Marocaine</p>
+                                <p class="prix">Prix: 1500,99 DH</p>
+                                <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                            </div>
+                        </div>
+                        <div class="produit" id="tapie7">
+                            <a href="Fiches de produits/Fiche de produit accessoire 7.html"><img src="photos catalogue/accessoire7.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Collier en Agate</p>
+                            <p class="prix">Prix: 2500,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie8">
+                            <a href="Fiches de produits/Fiche de produit accessoire 8.html"><img src="photos catalogue/accessoire8.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Mdamma en or</p>
+                            <p class="prix">Prix: 5000,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                        <div class="produit" id="tapie9">
+                            <a href="Fiches de produits/Fiche de produit accessoire 9.html"><img src="photos catalogue/accessoire9.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
+                            <p class="nom">Mdamma en agate</p>
+                            <p class="prix">Prix: 5800,99 DH</p>
+                            <button><i class='bx bx-basket'></i><a href="Panier d'achat.html">Ajouter au panier</a></button>
+                        </div>
+                    </div>
+                </div>    
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="logo">
+            <img src="photos footer and header/logo.jpeg" class="image">
+        </div>
+        <p class="p1">L'Artisanat du maroc</p>
+        <div class="all">
+            <div class="D">
+                <div class="links">
+                    <p>Plan de site</p>
+                    <ul class="L">
+                        <li><a href="Accueil.html">Accueil</a></li>
+                        <li><a href="Catalogue de produits.html">Catalogue de produits</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="se connecter.html#se connecter">Mon compte</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="Nous">
+                    <p class="p2">Ce qui concerne notre plateforme</p>
+                    <ul class="L2">
+                        <li><a href="Qui somme nous.html">Qui sommes nous?</a></li>
+                        <li><a href="Accueil.html#categories">Catégorie</a></li>
+                        <li><a href="#">Politique de protection des donnees personnelles </a></li>
+                        <li><a href="Contact.html">Contactez nous</a></li>
+                    </ul>
+                </div>
+                <div class="Num">
+                    <p class="p3">Contact</p>
+                    <ul>
+                        <li class="LI">Av chahid hassan ben ahmed toto <span class="B"> qu ZAOUIA SAFI-MAROC</span></li>
+                        <li class="n"><i class='bx bxs-phone'>:</i>&nbsp;&nbsp;+212 (0) 501 023 231</li>
+                        <li class="n"><i class='bx bxs-mobile-vibration'>:</i>&nbsp; +212 (0) 604 458 198 </li>
+                        <li><i class='bx bxl-gmail' id="email">:</i>&nbsp;&nbsp;<input type="email" placeholder="Entrez votre G-mail"> </li>
+                    </ul>
+                </div>
+                    <div class="livraison">
+                        <p class="p4">Livraison et payement</p>
+                        <ul>
+                            <li><a href="Commande et Paiement.html#Livraison">Livraison</a></li>
+                            <li><a href="Commande et Paiement.html#Paiement">Payement</a></li>
+                            <li>
+                                <ul class="flex">
+                                    <li class="visa"><a href="Commande et Paiement.html#Paiement"><img src="photos footer and header/Visa-e-Mastercard.jpg"class="IMG1"></a></li>
+                                    <li><a href="Commande et Paiement.html#Paiement"><img src="photos footer and header/av2rv3z2f.jpg" class="IMG2"></a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="ICONES">
+                <p class="p5">Vous pouvez visiter nos comptes sur ces réseaux sociaux</p>
+                <a href="#"><i class="bi bi-facebook" style="color: #1877F2;" id="facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram" style="color: #E1306C;" id="instagram"></i></a>
+                <a href="#"><i class="bi bi-linkedin" style="color:  #0077B5;" id="linkedin"></i></a>
+                <a href="#"><i class="bi bi-twitter" style="color: #1DA1F2;" id="twitter"></i></a>
+                <a href="#"><i class="bi bi-pinterest" style="color: #E60023;" id="pinsterest"></i></a>
+            </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
