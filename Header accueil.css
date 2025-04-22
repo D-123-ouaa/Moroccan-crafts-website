@@ -275,3 +275,30 @@ body{
         width: 50px;
     }
 }
+
+/* Mode RTL */
+.rtl-mode {
+    direction: rtl;
+    font-family: 'Arial', 'Tahoma', sans-serif;
+    text-align: right;
+}
+
+.rtl-mode .nav-menu,
+.rtl-mode .container2 ul {
+    direction: rtl;
+}
+
+.rtl-mode .icon-laguage {
+    left: 20px;
+    right: auto;
+}
+
+.rtl-mode .nav-search {
+    margin-right: auto;
+    margin-left: 20px;
+}
+
+/* Ajustements spécifiques pour l'arabe */
+.rtl-mode [data-i18n] {
+    font-size: 1.1em; /* Ajustez selon la police arabe */
+}

@@ -3,6 +3,24 @@
 *{
     font-family: "Poppins",serif;
 }
+.modifier, .supprimer{
+    transition: all 0.9s ease; 
+}
+.modifier:hover , .supprimer:hover {
+    text-decoration: underline;
+    color: darkred; 
+    display: inline-block;
+    transform: scale(1.1);
+
+}
+.button a{
+    color: white;
+    text-decoration: none;
+}
+.button a:hover{
+    color:white;
+    
+}
 body{
     height: auto;
 }
@@ -304,5 +322,6 @@ textarea::placeholder {
     .formulaire #I1{
         position: relative;
         z-index: 1;
-    }    
+    } 
+       
 }
