@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="Catalogue de produits.css">
     <link rel="stylesheet" href="footer accueil.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="icon" href="photos footer and header/logo2.png" type="image/icon" style="border-radius:50% ;">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-    <link rel="icon" href="photos footer and header/logo.jpeg" type="image/icon" style="border-radius:20px ;">
 </head>
 <body>
     <div class="wrapper" id="catalogue">
@@ -78,6 +78,7 @@
             </div>
         </div>
         <div class="container">
+            <form>
             <div class="catalogue">
                 <div class="categories">
                     <p>Catégories</p>
@@ -101,9 +102,6 @@
                         <input type="checkbox" id="cat5" name="categories" value="Catégorie 5">
                         <label for="cat5">Les accessoires marocain</label>
                     </div>
-                    <div>
-                        <input type="submit" value="Valider" class="submit">
-                    </div>
                 </div>
                 <div class="fourchette">  
                     <p>Limitez le prix</p>
@@ -114,11 +112,12 @@
                         </div>
                         <div>
                             <label>Max</label>
-                            <p id="max-value">60000 Dh</p>
+                            <p id="max-value">10000 Dh</p>
                         </div>
                     </div>
                     <div class="range-fill">
-                        <input type="range" class="min-prix" value="100" min="10" max="500" step="100">
+                        <input type="range" class="min-prix" value="30" min="30" max="10000" step="30" id="min-slider">
+                        <input type="range" class="max-prix" value="10000" min="30" max="10000" step="1000" id="max-slider">
                     </div>
                 </div>
                 <div class="search">
@@ -126,6 +125,7 @@
                     <input type="search" name="searching" id="a-search" placeholder="Rechercher par nom ou caractéristique">
                 </div>
             </div>
+            </form>
             <div class="produits" id="Tapies">
                 <div class="trier">
                     <select name="Trie" id="select" aria-placeholder="Trier par">
@@ -133,13 +133,13 @@
                         <option checked>Prix Croissant</option>
                         <option checked>Prix Décroissant</option>
                         <option checked>Nouveautées</option>
-                        <option checked>Avis</option>
+                        <option checked><a href="Gestion des avis.css">Avis</a></option>
                     </select>
                 </div>
                 <div class="cover-tapis" >
                     <p>L'art du tapie</p>
                 </div>
-                <div class="Tapies">
+                <div class="Tapies" class="categorie tapis">
                     <div class="pro1">
                         <div class="produit" id="tapie1">
                             <a href="Fiches de produits/Fiche de produit tapie 1.html"><img src="photos catalogue/Tapie 1.jpg" alt="tapie 1" class="photo" width="280px" height="250px" title="tapie modèrne"></a>
@@ -205,7 +205,7 @@
                     <div class="cover-coussin">
                         <p>Coussin au Maroc</p>
                     </div>
-                    <div class="Coussins">
+                    <div class="Coussins" class="categorie tapis">
                         <div class="pro1">
                             <div class="produit" id="tapie1">
                                 <a href="Fiches de produits/FIche de produit coussin 1.html"><img src="photos catalogue/coussin1.jpg" alt="coussin " class="photo" width="280px" height="250px" title="coussin modèrne"></a>
@@ -272,7 +272,7 @@
                     <div class="cover-poterie">
                         <p>l'art du poterie</p>
                     </div>
-                    <div class="Poterie">
+                    <div class="Poterie" class="categorie poterie"> 
                         <div class="pro1">
                             <div class="produit" id="tapie1">
                                 <a href="Fiches de produits/Fiche de produit poterie 1.html"><img src="photos catalogue/Poterie 1.jpg" alt="poterie 1" class="photo" width="280px" height="250px" title="tajine modèrne"></a>
@@ -339,7 +339,7 @@
                     <div class="cover-beaute">
                         <p>La beauté Marocaine</p>
                     </div>
-                    <div class="Beauté">
+                    <div class="Beauté" class="categorie beauté">
                         <div class="pro1">
                             <div class="produit" id="tapie1">
                                 <a href="Fiches de produits/Fiche de produit beaute 1.html"><img src="photos catalogue/beaute 1.jpg" alt="beaute 1 " class="photo" width="280px" height="250px" title="beauté marocaine"></a>
@@ -406,7 +406,7 @@
                     <div class="cover-accessoire">
                         <p>Accessoires Marocaine</p>
                     </div>
-                    <div class="Accessoire">
+                    <div class="Accessoire" class="categorie accessoire">
                         <div class="pro1">
                             <div class="produit" id="tapie1">
                                 <a href="Fiches de produits/FIche de produit accessoire 1.html"><img src="photos catalogue/accessoire1.jpg" alt="beaute 9" class="photo" width="280px" height="250px" title="beauté marocaine"></a>
@@ -532,5 +532,8 @@
             </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="codes js/catalogue.js"></script>
+    <script src="codes js/jquery-3.6.0.js"></script>
 </body>
+
 </html>
