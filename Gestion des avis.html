@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="footer accueil.css">
     <link rel="stylesheet" href="bootstrap.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="icon" href="photos footer and header/logo2.png" type="image/icon" style="border-radius:50% ;">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Gestion des avis</title>
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="icon" href="photos footer and header/logo.jpeg" type="image/icon" style="border-radius:20px ;">
 </head>
 <body>
     <div class="wrapper">
@@ -82,12 +83,16 @@
                 <h1>Gestion De Votre Avis</h1>
                 <div class="avis">
                     <p class="p1">Votre avis</p>
-                    <p class="p2">Vous n'avez pas encore écrit d'avis</p>
+                    <button class="p2" id="showCommentsBtn">Afficher vos avis</button>
                     <i class='bi bi-arrow-left' id="I1"></i><a href="Mon compte.html" class="retour">Retour</a>
+                </div>
+                
+               <div id="commentsContainer" style="display: none; margin-top: 30px;">
+                    <h3>Vos Commentaires :</h3>
+                    <div id="commentsList" class="comments-list"></div>
                 </div>
             </div>
         </div>
-    </div>
     <footer class="footer">
         <div class="logo">
             <img src="photos footer and header/logo.jpeg" class="image">
@@ -148,5 +153,7 @@
             </div>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="codes js/jquery-3.6.0.js"></script>
+    <script src="codes js/gestion des avis.js"></script>
 </body>
 </html>
