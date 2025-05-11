@@ -243,6 +243,11 @@ input[type="submit"]:focus {
     border-radius: 10px;
     transition: all .3s ease;
 }
+.table-produits{
+    margin-right: 25px;
+    position: relative;
+    left: -10px;
+}
 #title7 td button:hover{
     background: rgb(59, 1, 1);  
 }
@@ -280,3 +285,4 @@ input[type="submit"]:focus {
         left: -20px;
     }
 }
+

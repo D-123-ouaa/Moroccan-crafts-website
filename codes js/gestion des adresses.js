@@ -1,133 +1,145 @@
 $(document).ready(function() {
-  // Animation d'entrée du titre h1
-  $('.GESTION h1').each(function() {
-      var $h1 = $(this);
-      
-      $h1
-          .css({
-              'opacity': '0',
-              'letter-spacing': '0',
-              'transition': 'all 1s ease-out',
-              'display': 'inline-block',
-              'white-space': 'nowrap'
-          })
-          .delay(300)
-          .queue(function(next) {
-              $(this)
-                  .css('opacity', '1')
-                  .animate({
-                      'letter-spacing': '10px'
-                  }, 800, function() {
-                      $(this).animate({
-                          'letter-spacing': '3px'
-                      }, 400);
-                  });
-              next();
-          });
-  });
+    // Initialisation des éléments
+    initAddressManagement();
 
-  // Animation d'entrée des boutons
-  $('.gestion button').each(function(index) {
-      $(this)
-          .css({
-              'opacity': '0',
-              'transform': 'scale(0.8)',
-              'transition': 'all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) ' + (index * 0.1 + 0.3) + 's'
-          })
-          .delay(300 + index * 100)
-          .queue(function(next) {
-              $(this).css({
-                  'opacity': '1',
-                  'transform': 'scale(1)'
-              });
-              next();
-          });
-  });
+    function initAddressManagement() {
+        if ($('.GESTION').length) {
+            initAddresses();
+            setupAddressButtons();
+            animateElements();
+            ensureAddButtonExists(); // Nouvelle fonction pour garantir l'existence du bouton
+        }
+        
+        if ($('.NOUVELLE').length) {
+            setupNewAddressForm();
+        }
+    }
 
-  // Boutons Modifier/Supprimer
-  $('.gestion button:not(.b)').hover(
-      function() {
-          $(this).stop().animate({
-              'transform': 'scale(1.1) translateY(-3px)',
-              'box-shadow': '0 5px 15px rgba(0,0,0,0.2)',
-              'background-color': $(this).text().trim() === 'Modifier' ? '#3498db' : '#e74c3c'
-          }, 200);
-      },
-      function() {
-          $(this).stop().animate({
-              'transform': 'scale(1) translateY(0)',
-              'box-shadow': '0 2px 5px rgba(0,0,0,0.1)',
-              'background-color': '#f8f9fa'
-          }, 200);
-      }
-  ).click(function() {
-      var btn = $(this);
-      
-      btn.stop().animate({
-          'transform': 'scale(0.9) translateY(2px)',
-          'opacity': 0.8
-      }, 100)
-      .animate({
-          'transform': 'scale(1.1) translateY(-5px)',
-          'opacity': 1
-      }, 150)
-      .animate({
-          'transform': 'scale(1) translateY(0)'
-      }, 100, function() {
-          var addressElement = btn.siblings('p').first();
-          
-          if (btn.text().trim() === 'Modifier') {
-              var newAddress = prompt("Modifier l'adresse:", addressElement.text());
-              if (newAddress !== null) {
-                  addressElement.hide().text(newAddress).fadeIn(300)
-                      .css('color', '#27ae60') // Vert au début
-                      .animate({'color': '#000000'}, 1000); // Devient noir
-              }
-          } 
-          else if (btn.text().trim() === 'Supprimer') {
-              if (confirm('Voulez-vous vraiment supprimer cette adresse ?')) {
-                  addressElement.fadeOut(300, function() {
-                      $(this).text("Aucune adresse définie").fadeIn(300)
-                          .css('font-style', 'italic')
-                          .css('color', '#95a5a6');
-                  });
-              }
-          }
-      });
-  });
+    // Nouvelle fonction pour s'assurer que le bouton existe
+    function ensureAddButtonExists() {
+        // Vérifie si le bouton existe déjà
+        if ($('.gestion .b').length === 0) {
+            // Crée le bouton s'il n'existe pas
+            $('.gestion').append(`
+                <button class="b"><a href="Nouvelle adresse.html">Ajouter une adresse</a></button>
+                <br>
+            `);
+        }
+    }
 
-  // Bouton "Ajouter une adresse" - LAISSÉ INTACT
-  $('.gestion .b').hover(
-      function() {
-          $(this).stop().animate({
-              'letter-spacing': '2px',
-              'box-shadow': '0 5px 20px rgba(46, 204, 113, 0.4)',
-              'transform': 'translateY(-3px)'
-          }, 300);
-      },
-      function() {
-          $(this).stop().animate({
-              'letter-spacing': 'normal',
-              'box-shadow': 'none',
-              'transform': 'translateY(0)'
-          }, 300);
-      }
-  ).click(function(e) {
-      e.preventDefault();
-      var btn = $(this);
-      
-      btn.stop().animate({
-          'transform': 'scale(0.95) translateY(5px)',
-          'opacity': 0.7
-      }, 100)
-      .animate({
-          'transform': 'scale(1.1) translateY(-10px)',
-          'opacity': 1
-      }, 150)
-      .animate({
-          'transform': 'scale(1) translateY(0)'
-      }, 200, function() {
-          window.location.href = btn.find('a').attr('href');
-      });
-  });
+    // Fonctions existantes (conservées sans modification)
+    function initAddresses() {
+        let addresses = JSON.parse(localStorage.getItem('userAddresses')) || [];
+        
+        if (addresses.length === 0) {
+            addresses = [{
+                id: generateId(),
+                address: "009 Rue EL saada, Casablanca",
+                isDefault: true
+            }];
+            localStorage.setItem('userAddresses', JSON.stringify(addresses));
+        }
+        
+        displayCurrentAddress(addresses);
+    }
+
+    function displayCurrentAddress(addresses) {
+        if (addresses.length > 0) {
+            $('#stock').text(addresses[0].address);
+        }
+    }
+
+    function setupAddressButtons() {
+        $('.gestion button:contains("Modifier")').on('click', function() {
+            const addresses = JSON.parse(localStorage.getItem('userAddresses')) || [];
+            if (addresses.length === 0) return;
+            
+            const newAddress = prompt("Modifiez l'adresse:", addresses[0].address);
+            if (newAddress && newAddress !== addresses[0].address) {
+                addresses[0].address = newAddress;
+                localStorage.setItem('userAddresses', JSON.stringify(addresses));
+                $('#stock').text(newAddress);
+                showNotification('Adresse modifiée avec succès!');
+            }
+        });
+        
+        $('.gestion button:contains("Supprimer")').on('click', function() {
+            const addresses = JSON.parse(localStorage.getItem('userAddresses')) || [];
+            if (addresses.length === 0) return;
+            
+            if (confirm('Voulez-vous vraiment supprimer cette adresse?')) {
+                addresses.shift();
+                
+                if (addresses.length === 0) {
+                    addresses.push({
+                        id: generateId(),
+                        address: "Adresse par défaut",
+                        isDefault: true
+                    });
+                }
+                
+                localStorage.setItem('userAddresses', JSON.stringify(addresses));
+                $('#stock').text(addresses[0].address);
+                showNotification('Adresse supprimée avec succès!');
+            }
+        });
+    }
+
+    function setupNewAddressForm() {
+        $('.Enregitrer').on('click', function() {
+            const address = $('input[placeholder="Entrez votre adresse"]').val().trim();
+            
+            if (!address) {
+                alert('Veuillez entrer une adresse valide');
+                return;
+            }
+            
+            let addresses = JSON.parse(localStorage.getItem('userAddresses')) || [];
+            addresses.push({
+                id: generateId(),
+                address: address,
+                isDefault: false
+            });
+            
+            localStorage.setItem('userAddresses', JSON.stringify(addresses));
+            window.location.href = "Gestion des adresses.html";
+        });
+    }
+
+    function generateId() {
+        return Date.now().toString(36) + Math.random().toString(36).substr(2);
+    }
+
+    function animateElements() {
+        $('.GESTION h1, .gestion > *').css({
+            'opacity': '0',
+            'transform': 'translateY(20px)'
+        }).each(function(i) {
+            $(this).delay(200 * i).animate({
+                'opacity': '1',
+                'transform': 'translateY(0)'
+            }, 600);
+        });
+    }
+
+    function showNotification(message, isSuccess = true) {
+        const notification = $(`
+            <div class="notification alert alert-${isSuccess ? 'success' : 'danger'}">
+                ${message}
+            </div>
+        `);
+        
+        $('body').append(notification);
+        notification.css({
+            'position': 'fixed',
+            'top': '20px',
+            'right': '20px',
+            'z-index': '10000',
+            'opacity': '0',
+            'transition': 'opacity 0.3s'
+        });
+        
+        notification.animate({'opacity': 1}, 200);
+        setTimeout(() => notification.fadeOut(() => notification.remove()), 3000);
+    }
 });

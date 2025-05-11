@@ -4,7 +4,7 @@
     font-family: "Poppins",serif;
 }
 body{
-    min-height: 100vh;
+    height: 800px;   
     background: url('https://www.transparenttextures.com/patterns/brick-wall.png') center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -78,6 +78,7 @@ input[type="number"] {
     outline: none;
     border: none;
     border-radius: 10px;
+    color: white;
     transition: all .3s ease;
 }
 .au-panier:hover{
@@ -120,16 +121,21 @@ input[type="number"] {
     position: relative;
     left:0;
 }
-#photo{
+.card-img-top{
     height: 250px;
+    width: 290px;
     margin: 5px;
-    width: 300px;
+    position: relative;
+    left: -12px;
+    border-radius: 5px;
 }
 .card{
-    width: 310px;
+    width: 300px;
+    height: 460px;
     background-color: #faebd7;
     border: none;
     transition: all .7s ease;
+    margin: 10px;
 }
 .card:hover{
     background-color: #f1d2bc;
@@ -151,6 +157,12 @@ h2{
 .card-prix{
     color: #471010;
     font-weight: 500;
+    position: relative;
+    left: -12px;
+}
+.card-title{
+    position: relative;
+    left: -12px;
 }
 .card-body button{
     height: 50px;
@@ -164,6 +176,8 @@ h2{
     position: relative;
     left: 10px;
     width: 180px;
+    position: relative;
+    left: -12px;
 }
 .card-body button:hover{
     background-color: #3b0101;
