@@ -33,6 +33,7 @@ body{
 .a{
     text-align: center;
     top: -30px;
+    left: 80px;
     position: relative;
 }
 .panier table{
@@ -44,11 +45,13 @@ body{
     width: 40%;
     text-align: center;
     position: relative;
-    left: -40px;
+    left: -30px;
 }
 .c, .e{
-    width: 35%;
+    width: 30%;
     text-align: center;
+    position: relative;
+    left: -10px;
 }
 .e{
     color: rgb(71, 16, 16);
@@ -56,6 +59,8 @@ body{
 .photo{
     border-radius: 50%;
     border: 2px white solid;
+    position: relative;
+    left: 35px;
 }
 table tr{
     height: 60px;
@@ -90,7 +95,7 @@ table tr td i:hover{
 }   
 #img{
     position: relative;
-    left: -50px;
+    left: -25px;
 }
 .title5{
     height: 150px;
@@ -203,7 +208,8 @@ input[type="text"]::placeholder {
     margin: 20px;
     left: 20px;
 }
-input[type="submit"] {
+#submit{
+    
     padding: 8px 20px;
     font-size: 16px; 
     color: white; 
@@ -246,7 +252,7 @@ input[type="submit"]:focus {
 .table-produits{
     margin-right: 25px;
     position: relative;
-    left: -10px;
+    left: -25px;
 }
 #title7 td button:hover{
     background: rgb(59, 1, 1);  
@@ -261,6 +267,10 @@ input[type="submit"]:focus {
 .i{
     position: relative;
     left: 10px;
+}
+.title8 .n{
+    position: relative;
+    right: -100px;
 }
 @media screen and (max-width: 600px){
     .panier{

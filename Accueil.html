@@ -14,6 +14,7 @@
     <link rel="icon" href="photos footer and header/logo2.png" type="image/icon" style="border-radius:50% ;">
     <script src="codes js/header.js"></script>
     <script src="codes js/acceuil.js" defer></script>
+    <script src="codes js/Produits.js"></script>
     
 </head> 
 <body> 
@@ -48,18 +49,18 @@
                     <a href="S'inscrire.html"  id="registerbtn">&nbsp;s'inscrire</a></span>
                 </div>
                 <div class="icon-panier dropdown">
-                    <ul class="Panier">
-                        <li class="nav-item dropdown">
-                            <a id="panierA" href="#" role="button" data-bs-toggle="dropdown">
-                                <i class="bi bi-cart" id="panierI"></i>
-                                <span class="cart-count">0</span> <!-- Ajout de ce span -->
-                            </a>
-                            <ul class="dropdown-menu sous">
-                                <li><a class="dropdown-item" href="Panier d'achat.html">Voir le panier</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+    <ul class="Panier">
+        <li class="nav-item dropdown">
+            <a class="" href="#" role="button" data-bs-toggle="dropdown">
+                <i class="bi bi-cart"></i>
+                <span class="cart-count">0</span>
+            </a>
+            <ul class="dropdown-menu sous">
+                <li><a class="dropdown-item" href="Panier d'achat.html">Voir le panier</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
                 <div class="icon-laguage dropdown">
                     <ul class="langue">
                       <li class="nav-item dropdown">
@@ -98,66 +99,72 @@
                     <div class="produit-phare">
                         <div class="produit-phare1">
                             <div class="produit1">
-                                <div class="lines produit-item" id="p1" data-id="16" 
-                                data-name="Coussin Classique" 
-                                data-price="500,99 DH" 
-                                data-img="photos accueil/coussin 3.jpg">
+                                <div class="lines produit-item" id="p1">
                                     <a href="Fiche de produit.html?id=16"><img src="photos accueil/coussin 3.jpg" title="coussin" id="imgs1" class="pr1"></a>
                                     <p>C'est un type de coussin doux et très demandé dans notre plateforme</p>
                                     <p class="prix">Prix: 500,99 DH</p>
-                                    <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                    <a class="panier" 
+                                        onclick="ajouterAuPanier(16)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
+
                                 </div>
                             </div>
                         </div>
                         <div class="produit-phare2">
                             <div class="produit2">
-                                <div class="lines produit-item" id="p2" data-id="32" 
-                                data-name="Pack Hammam" 
-                                data-price="2000,99 DH" 
-                                data-img="photos accueil/beaute 4.png">
+                                <div class="lines produit-item" id="p2">
                                     <a href="Fiche de produit.html?id=32"><img src="photos accueil/beaute 4.png" title="Beauté" id="imgs1" class="pr2"></a>
                                     <p>Un parmis les meilleurs produits de beauté dans notre plateforme </p>
                                     <p class="prix">Prix: 2000,99 DH</p>
-                                    <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                    <a class="panier" 
+                                        onclick="ajouterAuPanier(32)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                                 </div> 
                             </div>
                         </div>
                         <div class="produit-phare3">
                             <div class="produit3">
-                                <div class="lines produit-item" id="p3" data-id="39" 
-                                data-name="Bague Anneau" 
-                                data-price="570,99 DH" 
-                                data-img="photos accueil/accessoire 4 (2).jpg">
+                                <div class="lines produit-item" id="p3">
                                     <a href="Fiche de produit.html?id=39"><img src="photos accueil/accessoire 4 (2).jpg" title="Accessoire" id="imgs1" class="pr3"></a>
                                     <p>C'est un accessoire parmis les origines de l'artisanat au Maroc </p>
                                     <p class="prix">Prix: 570,99 DH</p>
-                                    <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                    <a class="panier" 
+                                        onclick="ajouterAuPanier(39)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="produit-phare4">
                             <div class="produit4">
-                                <div class="lines produit-item" id="p4" data-id=22" 
-                                data-name="Vase En Cèramique" 
-                                data-price="250,99 DH" 
-                                data-img="photos accueil/poterie 2.jpg">
+                                <div class="lines produit-item" id="p4">
                                     <a href="Fiche de produit.html?id=22"><img src="photos accueil/poterie 2.jpg" title="Poterie" id="imgs1" class="pr4"></a>
                                     <p>L'un des meilleurs produits de poterie sur notre plateforme </p>
                                     <p class="prix">Prix: 250,99 DH</p>
-                                    <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                    <a class="panier" 
+                                        onclick="ajouterAuPanier(22)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                         <div class="produit-phare5">
                             <div class="produit5">
-                                <div class="lines produit-item" id="p5" data-id="1" 
-                                data-name="Tapie En Jute" 
-                                data-price="499,99 DH" 
-                                data-img="photos accueil/Tapie 1.jpg">
+                                <div class="lines produit-item" id="p5">
                                     <a href="Fiche de produit.html?id=1"><img src="photos accueil/Tapie 1.jpg" title="Tapie" id="imgs1" class="pr5"></a>
                                     <p>Parmis les tapies les plus demandés et les plus réussis </p>
                                     <p class="prix">Prix: 499,99 DH</p>
-                                    <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                    <a class="panier" 
+                                        onclick="ajouterAuPanier(1)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -178,41 +185,51 @@
                     </div>
                     <div class="sous-cover">
                         <div class="sous1">
-                            <div class="lien produit-item" id="t1" data-id="3" 
-                            data-name="Tapie Exterieure" 
-                            data-price="600,99 DH" 
-                            data-img="photos accueil/Tapie 2.jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=3"><img src="photos accueil/Tapie 2.jpg" alt="Une Tapie" title="Une Tapie" id="imgs2"></a>
                                 <p>Tapis extérieur en polypropylène </p>
                                 <p class="prix">Prix: 600,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(3)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous2">
-                            <div class="lien produit-item" id="t2" data-id="4" data-name="Tapie Coton" data-price="350,99 DH" data-img="photos accueil/Tapie 3.jpeg">
+                            <div class="lien produit-item" id="t2">
                                 <a href="Fiche de produit.html?id=4"><img src="photos accueil/Tapie 3.jpeg" alt="Une Tapie" title="Une Tapie" id="imgs2"></a>
                                 <p>Tapis berbère en coton </p>
                                 <p class="prix">Prix: 350,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(4)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous3">
-                            <div class="lien produit-item" id="t1" data-id="5" data-name="Tapie Fibres" data-price="400,99 DH" data-img="photos accueil/Tapie 4.jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=5"><img src="photos accueil/Tapie 4.jpg" alt="Une Tapie" title="Une Tapie" id="imgs2"></a>
                                 <p>Tapis moderne en fibres</p>
                                 <p class="prix">Prix: 400,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(5)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous4">
-                            <div class="lien produit-item" id="t4" data-id="2" 
-                            data-name="Tapie En Laine" 
-                            data-price="599,99 DH" 
-                            data-img="photos accueil/Tapie 5.jpeg">
+                            <div class="lien produit-item" id="t4">
                                 <a href="Fiche de produit.html?id=2"><img src="photos accueil/Tapie 5.jpeg" alt="Une Tapie" title="Une Tapie" id="imgs2"></a>
                                 <p>Tapis en laine tissée à la main</p>
                                 <p class="prix">Prix: 599,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(2)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -221,47 +238,51 @@
                 <div class="Produit2">
                     <div class="sous-cover2">
                         <div class="sous1">
-                            <div class="lien produit-item" id="t1" data-id="22" 
-                            data-name="Vase En Cèramique" 
-                            data-price="250,99 DH" 
-                            data-img="photos accueil/poterie 2.jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=22"><img src="photos accueil/poterie 2.jpg" alt="Un vase" title="Un vase" id="imgs2"></a>
                                 <p>Vase en céramique émaillée</p>
                                 <p class="prix">Prix: 250,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(22)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous2">
-                            <div class="lien produit-item" id="t2" data-id="23" 
-                            data-name="Plat Décoratif" 
-                            data-price="299,99 DH" 
-                            data-img="photos accueil/poterie 4.jpg">
+                            <div class="lien produit-item" id="t2">
                                 <a href="Fiche de produit.html?id=23"><img src="photos accueil/poterie 4.jpg" alt="Une assiette" title="Une assiette" id="imgs2"></a>
                                 <p>Plat décoratif en terre cuite</p>
                                 <p class="prix">Prix: 299,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(23)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous3">
-                            <div class="lien produit-item" id="t3" data-id="19" 
-                            data-name="Carafes" 
-                            data-price="340,99 DH" 
-                            data-img="photos accueil/Poterie 1.jpg">
+                            <div class="lien produit-item" id="t3">
                                 <a href="Fiche de produit.html?id=19"><img src="photos accueil/Poterie 1.jpg" alt="Deux vases" title="Deux vases" id="imgs2"></a>
                                 <p>Carafes en céramique émaillée  </p>
                                 <p class="prix">Prix: 340,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(19)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous4">
-                            <div class="lien produit-item" id="t4" data-id="20" 
-                            data-name="Tajine En Poterie" 
-                            data-price="350,99 DH" 
-                            data-img="photos accueil/poterie 3.jpeg">
+                            <div class="lien produit-item" id="t4">
                                 <a href="Fiche de produit.html?id=20"><img src="photos accueil/poterie 3.jpeg" alt="Une vase" title="Une vase" id="imgs2"></a>
                                 <p>Tajine en poterie vernissée</p>
                                 <p class="prix">Prix: 350,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                       onclick="ajouterAuPanier(20)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -279,47 +300,51 @@
                     </div>
                     <div class="sous-cover3">
                         <div class="sous1">
-                            <div class="lien produit-item" id="t1" data-id="41" 
-                            data-name="Sac En Or" 
-                            data-price="15000,99 DH" 
-                            data-img="photos accueil/accessoire 1 (2).jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=41"><img src="photos accueil/accessoire 1 (2).jpg" alt="Un sac" title="Un sac" id="imgs3"></a>
                                 <p>Sac en or traditionnelle </p>
                                 <p class="prix">Prix: 15000,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(41)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous2">
-                            <div class="lien produit-item" id="t2" data-id="40" 
-                            data-name="Cherbil Marocaine" 
-                            data-price="1500,99 DH" 
-                            data-img="photos accueil/accessoire 2.jpg">
+                            <div class="lien produit-item" id="t2">
                                 <a href="Fiche de produit.html?id=40"><img src="photos accueil/accessoire 2.jpg" alt="Un sac et son chaussure" title="Un sac et son chaussure" id="imgs3"></a>
                                 <p>Le cherbil traditionnelle marocaine</p>
                                 <p class="prix">Prix:  1500,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(40)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous3">
-                            <div class="lien produit-item" id="t3" data-id="38" 
-                            data-name="Collier En Or" 
-                            data-price="10240,99 DH" 
-                            data-img="photos accueil/accessoire 3.jpg">
+                            <div class="lien produit-item" id="t3">
                                 <a href="Fiche de produit.html?id=38"><img src="photos accueil/accessoire 3.jpg" alt="Une collier" title="Une collier" id="imgs3"></a>
                                 <p>Collier en or</p>
                                 <p class="prix">Prix: 10240,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(38)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous4">
-                            <div class="lien produit-item" id="t4" data-id="44" 
-                            data-name="Mdamma En Or" 
-                            data-price="5000,99 DH" 
-                            data-img="photos accueil/accessoire 4.jpg">
+                            <div class="lien produit-item" id="t4">
                                 <a href="Fiche de produit.html?id=44"><img src="photos accueil/accessoire 4.jpg" alt="Une mdamma" title="Une mdamma" id="imgs3"></a>
                                 <p>La mdamma en or traditionnelle</p>
                                 <p class="prix">Prix: 5000,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(44)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -328,47 +353,51 @@
                 <div class="Produit4">
                     <div class="sous-cover4">
                         <div class="sous1">
-                            <div class="lien produit-item" id="t1" data-id="28" 
-                            data-name="Huile D'Argan" 
-                            data-price="300,99 DH" 
-                            data-img="photos accueil/beaute 1 (2).jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=28"><img src="photos accueil/beaute 1 (2).jpg" alt="Huile d'argan" title="Huile d'argan" id="imgs2"></a>
                                 <p>Huile d'Argan Douce</p>
                                 <p class="prix">Prix: 300,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(28)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous2">
-                            <div class="lien produit-item" id="t2" data-id="34" 
-                            data-name="Aker Fassi" 
-                            data-price="150,99 DH" 
-                            data-img="photos accueil/beaute 2.jpg">
+                            <div class="lien produit-item" id="t2">
                                 <a href="Fiche de produit.html?id=34"><img src="photos accueil/beaute 2.jpg" alt="Aker fassi" title="Aker fassi" id="imgs2"></a>
                                 <p>Aker Fassi </p>
                                 <p class="prix">Prix: 150,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(34)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous3">
-                            <div class="lien produit-item" id="t3" data-id="33" 
-                            data-name="Khôl artisanal" 
-                            data-price="250,99 DH" 
-                            data-img="photos accueil/beaute 3.jpg">
+                            <div class="lien produit-item" id="t3">
                                 <a href="Fiche de produit.html?id=33"><img src="photos accueil/beaute 3.jpg" alt="Khôl marocaine" title="Khôl marocaine" id="imgs2"></a>
                                 <p>Khôl artisanal</p>
                                 <p class="prix">Prix: 250,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(33)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous4">
-                            <div class="lien produit-item" id="t4" data-id="35" 
-                            data-name="Huile D'Amande" 
-                            data-price="300,99 DH" 
-                            data-img="photos accueil/Tapie 2.jpg">
+                            <div class="lien produit-item" id="t4">
                                 <a href="Fiche de produit.html?id=35"><img src="photos accueil/beaute 4.jpg" alt="Huile d'amande" title="Huile d'amande" id="imgs2"></a>
                                 <p>Huile d'Amande Douce</p>
                                 <p class="prix">Prix: 300,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(35)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -386,47 +415,51 @@
                     </div>
                     <div class="sous-cover5">
                         <div class="sous1">
-                            <div class="lien produit-item" id="t1" data-id="10" 
-                            data-name="Coussin Canapé" 
-                            data-price="160,99 DH" 
-                            data-img="photos accueil/coussin 1.jpg">
+                            <div class="lien produit-item" id="t1">
                                 <a href="Fiche de produit.html?id=10"><img src="photos accueil/coussin 1.jpg" alt="Un coussin" title="Un coussin" id="imgs2"></a>
                                 <p>Coussin pour canapé en tissu</p>
                                 <p class="prix">Prix: 160,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(10)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous2">
-                            <div class="lien produit-item" id="t2" data-id="13" 
-                            data-name="Coussin Rond" 
-                            data-price="290,99 DH" 
-                            data-img="photos accueil/coussin 2.jpg">
+                            <div class="lien produit-item" id="t2">
                                 <a href="Fiche de produit.html?id=13"><img src="photos accueil/coussin 2.jpg" alt="Un coussin" title="Un coussin" id="imgs2"></a>
                                 <p>Coussin de méditation rond</p>
                                 <p class="prix">Prix: 290,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(13)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous3">
-                            <div class="lien produit-item" id="t3" data-id="12" 
-                            data-name="Coussin Carré" 
-                            data-price="180,99 DH" 
-                            data-img="photos accueil/coussin 3 (2).jpg">
+                            <div class="lien produit-item" id="t3">
                                 <a href="Fiche de produit.html?id=12"><img src="photos accueil/coussin 3 (2).jpg" alt="Un coussin" title="Un coussin" id="imgs2"></a>
                                 <p>Coussin carré en coton bio </p>
                                 <p class="prix">Prix: 180,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                        onclick="ajouterAuPanier(12)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                         <div class="sous4">
-                            <div class="lien produit-item" id="t4" data-id="18" 
-                            data-name="Coussin à Bohème" 
-                            data-price="220,99 DH" 
-                            data-img="photos accueil/coussin 4.jpg">
+                            <div class="lien produit-item" id="t4">
                                 <a href="Fiche de produit.html?id=18"><img src="photos accueil/coussin 4.jpg" alt="Un coussin" title="Un coussin" id="imgs2"></a>
                                 <p>Coussin à franges bohème</p>
                                 <p class="prix">Prix: 220,99 DH</p>
-                                <a href="Panier d'achat.html" class="panier"><i class='bx bx-basket'></i><p class="i-p">Ajouter aux panier</p></a>
+                                <a class="panier" 
+                                       onclick="ajouterAuPanier(18)">
+                                        <i class='bx bx-basket'></i>
+                                        <p class="i-p">Ajouter au panier</p>
+                                    </a>
                             </div>
                         </div>
                     </div>
@@ -580,5 +613,8 @@
             </div>
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="codes js/Produits.js"></script>
+        <script src="codes js/header.js"></script>
+
 </body>
 </html>

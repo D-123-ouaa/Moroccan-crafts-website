@@ -81,66 +81,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-// Animation du panier
-function animateCart() {
-  const cartIcon = document.querySelector('.icon-panier a');
-  if (!cartIcon) return;
-  
-  cartIcon.style.transform = 'scale(1.3)';
-  cartIcon.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-  
-  setTimeout(() => {
-      cartIcon.style.transform = 'scale(1)';
-  }, 300);
-}
-
-// Animation des boutons "Ajouter au panier"
-document.querySelectorAll('.panier').forEach(button => {
-  button.addEventListener('click', function(e) {
-      e.preventDefault();
-      animateCart();
-      
-      // Mettre à jour le compteur du panier sans supprimer l'icône
-      const cartCountElement = document.querySelector('.icon-panier a');
-      if (cartCountElement) {
-          // Trouver l'élément span qui contient le nombre ou le créer
-          let countSpan = cartCountElement.querySelector('.cart-count');
-          
-          if (!countSpan) {
-              // Si le span n'existe pas, le créer et l'insérer après l'icône
-              const cartIcon = cartCountElement.querySelector('i');
-              countSpan = document.createElement('span');
-              countSpan.className = 'cart-count';
-              countSpan.textContent = '0';
-              cartIcon.insertAdjacentElement('afterend', countSpan);
-          }
-          
-          // Mettre à jour le compteur
-          const currentCount = parseInt(countSpan.textContent) || 0;
-          countSpan.textContent = currentCount + 1;
-          
-          // Animation du compteur
-          countSpan.style.display = 'inline-block';
-          countSpan.style.transform = 'scale(1.5)';
-          countSpan.style.transition = 'transform 0.3s ease';
-          
-          setTimeout(() => {
-              countSpan.style.transform = 'scale(1)';
-          }, 300);
-      }
-      
-      // Animation de confirmation
-      const productCard = this.closest('.lines, .lien');
-      if (productCard) {
-          productCard.style.boxShadow = '0 0 15px rgba(73, 11, 11, 0.8)';
-          setTimeout(() => {
-              productCard.style.boxShadow = 'none';
-          }, 1000);
-      }
-  });
-});
-
-
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("forAvis");
     const nomProduit = document.getElementById("nomP");

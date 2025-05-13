@@ -173,6 +173,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     searchInput.addEventListener('input', performSearch);
     searchIcon.addEventListener('click', performSearch);
+    updateCartCount();
 });
 class LanguageSwitcher {
     constructor() {
@@ -277,6 +278,7 @@ class LanguageSwitcher {
   // Initialisation au chargement
   document.addEventListener('DOMContentLoaded', () => {
     new LanguageSwitcher();
+    updateCartCount();
   });
 
 

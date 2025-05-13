@@ -60,8 +60,7 @@ $(document).ready(function() {
                         <input type="number" id="quantity" class="w-30" value="1" min="1" max="100">
                     </div>
                     <div class="mt-4">
-                        // Modifiez le bouton "Ajouter au panier" dans votre template HTML généré :
-                        <button class="au-panier">Ajouter au panier</button>
+                        <button onclick="ajouterAuPanier(${produit.id})" class="au-panier">Ajouter au panier</button>
                         <button class="au_wishlist"><a href="#">Ajouter à la wishlist</a></button>
                     </div>
                     <div class="mt-5 avis">

@@ -259,51 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Animation du panier
-    function animateCart() {
-        const cartIcon = document.querySelector('.icon-panier a');
-        if (!cartIcon) return;
-        
-        cartIcon.style.transform = 'scale(1.3)';
-        cartIcon.style.transition = 'transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)';
-        
-        setTimeout(() => {
-            cartIcon.style.transform = 'scale(1)';
-        }, 300);
-    }
-  
-    // Animation des boutons "Ajouter au panier"
-    document.querySelectorAll('.produit button').forEach(button => {
-        button.addEventListener('click', function(e) {
-            e.preventDefault();
-            animateCart();
-            
-            const cartCountElement = document.querySelector('.icon-panier a');
-            if (cartCountElement) {
-                let currentText = cartCountElement.textContent;
-                let currentCount = parseInt(currentText) || 0;
-                
-                cartCountElement.innerHTML = `<i class="bi bi-cart"></i>${currentCount + 1}`;
-                
-                cartCountElement.style.display = 'inline-block';
-                cartCountElement.style.transform = 'scale(1.5)';
-                cartCountElement.style.transition = 'transform 0.3s ease';
-                
-                setTimeout(() => {
-                    cartCountElement.style.transform = 'scale(1)';
-                }, 300);
-            }
-            
-            const productCard = this.closest('.produit');
-            if (productCard) {
-                productCard.style.boxShadow = '0 0 15px rgba(73, 11, 11, 0.8)';
-                setTimeout(() => {
-                    productCard.style.boxShadow = 'none';
-                }, 1000);
-            }
-        });
-    });
-
+    
     // Animation des produits au défilement
     const observerOptions = {
         threshold: 0.1

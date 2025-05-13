@@ -205,7 +205,7 @@ option{
     left: 200px;
 }
 .cover-tapis{
-    background: url(photos\ catalogue/Tapis\ cover.jpg);
+    background: url(photos_catalogue/Tapis\ cover.jpg);
     background-position: center;
     width: 900px;
     margin: 30px;
@@ -265,7 +265,7 @@ option{
     background-color: #471010;
     border: none;
     outline: none;
-    
+    color: white;
     padding: 10px;
     border-radius: 10px;
 }
@@ -280,10 +280,6 @@ option{
     left: 0;
     color: white;
 }
-.produit button a{
-    color: white;
-    text-decoration: none;
-}
 .produit .nom{
     font-size: 23px;
     font-weight: 600;
@@ -297,7 +293,7 @@ option{
     color: #860101;
 }
 .cover-coussin{
-    background: url(photos\ catalogue/coussin\ cover.jpg) center;
+    background: url(photos_catalogue/coussin\ cover.jpg) center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 900px;
@@ -328,7 +324,7 @@ option{
     left: -185px;
 }
 .cover-poterie{
-    background: url(photos\ catalogue/poterie\ cover.jpg) center;
+    background: url(photos_catalogue/poterie\ cover.jpg) center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 900px;
@@ -359,7 +355,7 @@ option{
     left: -185px;
 }
 .cover-beaute{
-    background: url(photos\ catalogue/beaute\ cover.jpg) center;
+    background: url(photos_catalogue/beaute\ cover.jpg) center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 900px;
@@ -390,7 +386,7 @@ option{
     left: -185px;
 }
 .cover-accessoire{
-    background: url(photos\ catalogue/accessoire\ cover.jpg) center;
+    background: url(photos_catalogue/accessoire\ cover.jpg) center;
     background-size: cover;
     background-repeat: no-repeat;
     width: 900px;
