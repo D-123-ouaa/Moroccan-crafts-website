@@ -1,4 +1,42 @@
-let myForm =document.getElementById("formCommande");
+// Première partie (gestion du panier) - inchangée
+document.addEventListener('DOMContentLoaded', function () {
+    const panier = JSON.parse(localStorage.getItem("panier")) || [];
+    const bodyTable = document.getElementById("commande-body");
+    const nbArticles = document.getElementById("nb-articles");
+
+    const totalArticles = document.querySelector('#table2 .f');
+    const totalPrix = document.querySelector('#table2 .g');
+    const totalGlobal = document.querySelector('#table2 .title8 td:last-child');
+
+    let total = 0;
+    let quantiteTotale = 0;
+
+    panier.forEach(produit => {
+        const quantite = produit.quantite || 1;
+        const prix = parseFloat(produit.prix);
+        const sousTotal = prix * quantite;
+
+        total += sousTotal;
+        quantiteTotale += quantite;
+
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+            <td><img src="${produit.image}" alt="" class="photo" width="50" height="50"></td>
+            <td>${produit.nom}</td>
+            <td>${prix} DH</td>
+            <td><i class='bx bxs-trash-alt'></i></td>
+        `;
+        bodyTable.appendChild(tr);
+    });
+
+    nbArticles.textContent = `${quantiteTotale} article(s)`;
+    totalArticles.textContent = `${quantiteTotale} article(s)`;
+    totalPrix.textContent = `${total.toFixed(2)} DH`;
+    totalGlobal.textContent = `${total.toFixed(2)} DH`;
+});
+
+// Deuxième partie (validation du formulaire) - inchangée
+let myForm = document.getElementById("formCommande");
 let btnVerif = document.getElementById("btnVerif");
 let regExNom = /^[a-zA-Z\s-\d]+$/;
 let regExEmail = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
@@ -69,17 +107,12 @@ function verifierForm(){
     return isValid;
 }
 
-
-
-
 btnVerif.addEventListener("click", function(){
-
     if(verifierForm()){
         alert("Formulaire valide, veuillez confirmer votre commande!");
     } else {
         alert("Veuillez remplir le formulaire correctement.");
     }
-
 })
 
 myForm.addEventListener("submit", function(event){

@@ -1,186 +1,180 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // 1. Ajout du CSS dynamiquement
-  const style = document.createElement('style');
-  style.textContent = `
-      .comments-list {
-          transition: all 0.4s ease;
-      }
+document.addEventListener('DOMContentLoaded', () => {
+    // Animation du titre h1 lettre par lettre
+    const title = document.querySelector('.AVIS h1');
+    const originalText = title.textContent;
+    title.textContent = ''; // Vide le titre
+    
+    // Crée un span pour chaque lettre avec un délai
+    originalText.split('').forEach((char, index) => {
+        const span = document.createElement('span');
+        span.textContent = char === ' ' ? ' ' : char; // Remplace les espaces par des espaces insécables
+        span.style.opacity = '0';
+        span.style.display = 'inline-block';
+        span.style.transition = `opacity 0.3s ease ${index * 0.1}s, transform 0.3s ease ${index * 0.1}s`;
+        
+        // Position initiale aléatoire pour un effet plus dynamique
+        const randomX = (Math.random() * 20 - 10);
+        const randomY = (Math.random() * 20 - 10);
+        span.style.transform = `translate(${randomX}px, ${randomY}px)`;
+        
+        title.appendChild(span);
+        
+        // Animation d'apparition
+        setTimeout(() => {
+            span.style.opacity = '1';
+            span.style.transform = 'translate(0, 0)';
+        }, 100 + index * 100);
+    });
 
-      .comment {
-          background: #f9f9f9;
-          padding: 15px;
-          margin-bottom: 15px;
-          border-radius: 5px;
-          box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-          opacity: 0;
-          transition: opacity 0.3s ease, transform 0.3s ease;
-          transform: translateY(10px);
-      }
+    // Le reste de votre code existant...
+    const commentsContainer = document.getElementById('commentsContainer');
+    const commentsList = document.getElementById('commentsList');
+    const showCommentsBtn = document.getElementById('showCommentsBtn');
 
-      .comment.show {
-          opacity: 1;
-          transform: translateY(0);
-      }
+    // Fonction pour animer l'apparition des éléments
+    function fadeIn(element, duration = 300) {
+        element.style.opacity = 0;
+        element.style.display = 'block';
+        let start = null;
+        
+        function animate(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const opacity = Math.min(progress / duration, 1);
+            element.style.opacity = opacity;
+            if (progress < duration) {
+                window.requestAnimationFrame(animate);
+            }
+        }
+        window.requestAnimationFrame(animate);
+    }
 
-      .loading-spinner {
-          text-align: center;
-          padding: 20px;
-          color: #666;
-      }
+    // Fonction pour animer la disparition des éléments
+    function fadeOut(element, duration = 300) {
+        let start = null;
+        
+        function animate(timestamp) {
+            if (!start) start = timestamp;
+            const progress = timestamp - start;
+            const opacity = Math.max(1 - progress / duration, 0);
+            element.style.opacity = opacity;
+            if (progress < duration) {
+                window.requestAnimationFrame(animate);
+            } else {
+                element.style.display = 'none';
+            }
+        }
+        window.requestAnimationFrame(animate);
+    }
 
-      .loading-spinner i {
-          animation: spin 1s linear infinite;
-          margin-right: 10px;
-      }
+    // Fonction pour afficher les commentaires avec animation
+    function afficherCommentaires() {
+        const commentaires = JSON.parse(localStorage.getItem('blogCommentaires')) || [];
+        commentsList.innerHTML = '';
 
-      @keyframes spin {
-          from { transform: rotate(0deg); }
-          to { transform: rotate(360deg); }
-      }
+        if(commentaires.length === 0) {
+            commentsList.innerHTML = '<p class="no-comments">Aucun commentaire trouvé.</p>';
+            fadeIn(commentsList);
+            return;
+        }
 
-      .no-comments, .error {
-          text-align: center;
-          padding: 20px;
-          color: #666;
-      }
+        commentaires.forEach((comment, index) => {
+            const commentElement = document.createElement('div');
+            commentElement.className = 'comment-item';
+            commentElement.style.opacity = '0';
+            commentElement.style.transform = 'translateY(20px)';
+            commentElement.style.transition = `all 0.3s ease ${index * 0.1}s`;
+            
+            commentElement.innerHTML = `
+                <div class="comment-header">
+                    <strong>${comment.nom}</strong>
+                    <span class="comment-date">${comment.date}</span>
+                </div>
+                <div class="comment-content">${comment.message}</div>
+                <div class="comment-actions">
+                    <button class="btn-delete" data-id="${comment.id}">Supprimer</button>
+                </div>
+            `;
+            commentsList.appendChild(commentElement);
+            
+            // Animation d'apparition
+            setTimeout(() => {
+                commentElement.style.opacity = '1';
+                commentElement.style.transform = 'translateY(0)';
+            }, 100);
+        });
 
-      #showCommentsBtn {
-          transition: all 0.3s ease;
-          position: relative;
-          overflow: hidden;
-      }
+        // Ajouter les événements de suppression avec animation
+        document.querySelectorAll('.btn-delete').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const commentItem = this.closest('.comment-item');
+                commentItem.style.transition = 'all 0.3s ease';
+                commentItem.style.opacity = '0';
+                commentItem.style.height = '0';
+                commentItem.style.padding = '0';
+                commentItem.style.margin = '0';
+                commentItem.style.overflow = 'hidden';
+                
+                setTimeout(() => {
+                    const id = parseInt(this.getAttribute('data-id'));
+                    supprimerCommentaire(id);
+                }, 300);
+            });
+        });
+    }
 
-      #showCommentsBtn:after {
-          content: '';
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          width: 5px;
-          height: 5px;
-          background: rgba(255,255,255,.5);
-          opacity: 0;
-          border-radius: 100%;
-          transform: scale(1, 1) translate(-50%);
-          transform-origin: 50% 50%;
-      }
+    // Fonction pour supprimer un commentaire
+    function supprimerCommentaire(id) {
+        let commentaires = JSON.parse(localStorage.getItem('blogCommentaires')) || [];
+        commentaires = commentaires.filter(comment => comment.id !== id);
+        localStorage.setItem('blogCommentaires', JSON.stringify(commentaires));
+        afficherCommentaires();
+    }
 
-      #showCommentsBtn:focus:not(:active)::after {
-          animation: ripple 1s ease-out;
-      }
+    // Bouton pour afficher/masquer les commentaires avec animation
+    function toggleComments() {
+        if(commentsContainer.style.display === 'none' || !commentsContainer.style.display) {
+            // Animation du bouton
+            showCommentsBtn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                showCommentsBtn.style.transform = 'scale(1)';
+            }, 100);
+            
+            fadeIn(commentsContainer, 400);
+            showCommentsBtn.innerHTML = 'Masquer les avis 🔒';
+            afficherCommentaires();
+        } else {
+            // Animation du bouton
+            showCommentsBtn.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                showCommentsBtn.style.transform = 'scale(1)';
+            }, 100);
+            
+            fadeOut(commentsContainer, 400);
+            showCommentsBtn.innerHTML = 'Afficher les avis 🔓';
+        }
+    }
 
-      @keyframes ripple {
-          0% {
-              transform: scale(0, 0);
-              opacity: 1;
-          }
-          20% {
-              transform: scale(25, 25);
-              opacity: 1;
-          }
-          100% {
-              opacity: 0;
-              transform: scale(40, 40);
-          }
-      }
-  `;
-  document.head.appendChild(style);
+    // Initialiser le bouton avec animation
+    showCommentsBtn.innerHTML = 'Afficher les avis 🔓';
+    showCommentsBtn.style.transition = 'all 0.2s ease';
+    showCommentsBtn.addEventListener('click', toggleComments);
+    showCommentsBtn.addEventListener('mouseenter', () => {
+        showCommentsBtn.style.transform = 'scale(1.05)';
+    });
+    showCommentsBtn.addEventListener('mouseleave', () => {
+        showCommentsBtn.style.transform = 'scale(1)';
+    });
 
-  // 2. Sélection des éléments avec vérification
-  const elements = {
-      showBtn: document.getElementById('showCommentsBtn'),
-      container: document.getElementById('commentsContainer'),
-      list: document.getElementById('commentsList')
-  };
+    // Chargement initial si visible
+    if(commentsContainer.style.display === 'block') {
+        toggleComments();
+    }
 
-  if (!elements.showBtn || !elements.container || !elements.list) {
-      console.error("Éléments manquants dans le DOM");
-      return;
-  }
-
-  // 3. Configuration
-  const config = {
-      storageKey: 'blog_commentaires',
-      defaultKey: 'commentaires',
-      animationSpeed: 400
-  };
-
-  // 4. Fonction pour mettre à jour le bouton avec icône œil
-  function updateButton(isVisible) {
-      // Icônes Font Awesome pour œil ouvert/fermé
-      const eyeIcon = isVisible ? '🔒' : '🔓'; // Emojis comme solution de repli
-      const iconClass = isVisible ? 'fa-eye-slash' : 'fa-eye';
-      
-      elements.showBtn.innerHTML = `
-          <span class="eye-icon">
-              <i class="fas ${iconClass}"></i> <!-- Version Font Awesome -->
-              ${eyeIcon} <!-- Version emoji si Font Awesome échoue -->
-          </span>
-          <span class="btn-text">${isVisible ? 'Masquer les avis' : 'Afficher les avis'}</span>
-      `;
-      elements.showBtn.classList.toggle('active', isVisible);
-  }
-
-  // 5. Gestion du clic avec animations jQuery
-  elements.showBtn.addEventListener('click', function() {
-      const willShow = !$(elements.container).is(':visible');
-      
-      if (willShow) {
-          // Animation pour afficher le conteneur
-          $(elements.container).slideDown(config.animationSpeed, function() {
-              updateButton(true);
-              loadComments();
-          });
-      } else {
-          // Animation pour masquer le conteneur
-          $(elements.container).slideUp(config.animationSpeed, function() {
-              updateButton(false);
-          });
-      }
-  });
-
-  // 6. Fonction de chargement des commentaires avec animation
-  function loadComments() {
-      try {
-          // Ajout d'un indicateur de chargement
-          $(elements.list).html('<div class="loading-spinner"><i class="bi bi-arrow-repeat"></i> Chargement...</div>');
-          
-          // Simulation d'un délai pour l'animation (peut être supprimé en production)
-          setTimeout(function() {
-              const rawData = localStorage.getItem(config.storageKey) || 
-                             localStorage.getItem(config.defaultKey) || '[]';
-              const comments = JSON.parse(rawData);
-              
-              if (comments.length) {
-                  let html = '';
-                  // Animation d'apparition séquentielle des commentaires
-                  $.each(comments, function(index, comment) {
-                      html += `
-                          <div class="comment" style="display:none;">
-                              <strong>${comment.nom || 'Anonyme'}</strong>
-                              <p>${comment.message}</p>
-                              <small>${new Date(comment.date).toLocaleString()}</small>
-                          </div>
-                      `;
-                  });
-                  
-                  $(elements.list).html(html);
-                  // Animation d'apparition des commentaires un par un
-                  $(elements.list).find('.comment').each(function(i) {
-                      $(this).delay(i * 150).fadeIn(300);
-                  });
-              } else {
-                  $(elements.list).html('<p class="no-comments">Aucun commentaire</p>')
-                      .hide().fadeIn(300);
-              }
-          }, 500); // Délai artificiel pour démontrer l'animation
-          
-      } catch (error) {
-          $(elements.list).html('<p class="error">Erreur de chargement</p>')
-              .hide().fadeIn(300);
-      }
-  }
-
-  // Initialisation
-  updateButton(false);
-  $(elements.container).hide();
+    // Écouter les changements de localStorage (pour les autres onglets)
+    window.addEventListener('storage', (e) => {
+        if(e.key === 'blogCommentaires') {
+            afficherCommentaires();
+        }
+    });
 });
